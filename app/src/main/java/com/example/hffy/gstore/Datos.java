@@ -7,6 +7,8 @@ package com.example.hffy.gstore;
 public class Datos {
 
     // TODO: crear una forma de almacenar datos enviados por Json
+    String Datos;
+
 
     public boolean usuario(String u, String p){
         //TODO Verificar Usuarios Existentes

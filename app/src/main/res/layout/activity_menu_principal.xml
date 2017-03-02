@@ -24,7 +24,7 @@
             android:orientation="vertical" >
 
             <TextView
-                android:text="TextView"
+                android:text="GEEK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
@@ -71,6 +71,7 @@
                             android:paddingRight="10dp"
                             android:id="@+id/imageView5"
                             android:layout_weight="1" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -111,7 +112,7 @@
             </HorizontalScrollView>
 
             <TextView
-                android:text="TextView"
+                android:text="TEC"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
@@ -205,7 +206,7 @@
                 android:id="@+id/imageView10" />
 
             <TextView
-                android:text="TextView"
+                android:text="Become a Geek"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
@@ -291,7 +292,7 @@
             </HorizontalScrollView>
 
             <TextView
-                android:text="TextView"
+                android:text="Redes Sociales"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
