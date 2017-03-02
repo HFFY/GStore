@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtResultado;
     private TextView lblCrear;
     private Context context;
-    private Datos datos= new Datos();
+    //private Datos datos= Datos.getInstance();
 
 
     @Override
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 String campo_usuario = txtUsuario.getText().toString();
                 String campo_password = txtPassword.getText().toString();
 
-                if(datos.Usuario(campo_usuario,campo_password)){
+                if(Datos.getInstance().usuario(campo_usuario,campo_password)){
 
                     Intent menu=new Intent(context,MenuPrincipal.class);
                     startActivity(menu);

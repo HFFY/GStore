@@ -17,7 +17,6 @@ public class CrearUsuario extends AppCompatActivity {
     private Button btnCrear;
     private EditText txtCodigo;
     private Context context;
-    private Datos datos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +45,9 @@ public class CrearUsuario extends AppCompatActivity {
 
                 //TODO : verificar que todo está lleno
 
-                if(datos.Crear(campo_usuario,campo_contraseña,campo_email,campo_celular,campo_codigo)){
+                if(Datos.getInstance().crear(campo_usuario,campo_contraseña,campo_email,campo_celular,campo_codigo)){
 
-                    Intent iniciar=new Intent(context,MainActivity.class);
+                    Intent iniciar=new Intent(context,MenuPrincipal.class);
                     startActivity(iniciar);
 
                 } else {
