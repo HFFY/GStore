@@ -47,7 +47,7 @@ public class CrearUsuario extends AppCompatActivity {
 
                 if(Datos.getInstance().crear(campo_usuario,campo_contraseña,campo_email,campo_celular,campo_codigo)){
 
-                    Intent iniciar=new Intent(context,MenuPrincipal.class);
+                    Intent iniciar=new Intent(context,MainActivity.class);
                     startActivity(iniciar);
 
                 } else {
