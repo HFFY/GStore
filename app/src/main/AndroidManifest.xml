@@ -16,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".CrearUsuario" />
-        <activity android:name=".MenuPrincipal"></activity>
+        <activity android:name=".MenuPrincipal" />
+        <activity android:name=".Laptop" />
+        <activity android:name=".GeekZone"></activity>
     </application>
 
 </manifest>
