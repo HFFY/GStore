@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hffy.gstore">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -97,6 +99,8 @@
             android:label="Oasis Del Gamer"/>
         <activity android:name=".Otaku"
             android:label="Aldea Otaku"/>
+        <activity android:name=".VideoPlayer"
+            android:label="Video"/>
         <activity android:name=".Rata"
             android:label="Madriguera Del Niño Rata"></activity>
     </application>

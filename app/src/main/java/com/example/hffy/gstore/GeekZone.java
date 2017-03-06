@@ -5,9 +5,14 @@ import android.content.Intent;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class GeekZone extends AppCompatActivity {
 
@@ -20,55 +25,35 @@ public class GeekZone extends AppCompatActivity {
     private TextView lblGamer;
     private TextView lblOtaku;
     private TextView lblRata;
+    private ArrayList<Item> items=new ArrayList<Item>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_geek_zone);
+        ListView lista=(ListView)findViewById(R.id.ListViewGeekZone);
 
-        context=this;
-        imgBat=(ImageView)findViewById(R.id.imgBat);
-        imgGamer=(ImageView)findViewById(R.id.imgGamer);
-        imgOtaku=(ImageView)findViewById(R.id.imgOtaku);
-        imgRata=(ImageView)findViewById(R.id.imgRata);
-        lblBat=(TextView)findViewById(R.id.lblBat);
-        lblGamer=(TextView)findViewById(R.id.lblGamer);
-        lblOtaku=(TextView)findViewById(R.id.lblOtaku);
-        lblRata=(TextView)findViewById(R.id.lblRata);
+        items.add(new Item(1, "Baticueva", "Dentro de la oscura y deprabada cueva de nuestro amigo Batman encontrarás todo lo relacionado con comics.", R.drawable.bat,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
+        items.add(new Item(2, "Oasis Gamer", "En éste remanso de gamers podrás adquirir todo lo necesario para que tu experiencia durante el juego mejore.", R.drawable.gamer,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
+        items.add(new Item(3, "Aldea Escondida Del Otaku", "Si estás en busca de las esferas del dragon y necesitas provisiones para el camino... éste es el lugar para conseguir todo lo q necesita un otaku menos provisiones.", R.drawable.otaku,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
+        items.add(new Item(4, "Madriguera Del Niño Rata", "... Y como olvidarme del Niño Rata.", R.drawable.ninorata,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
 
-        imgBat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent bat= new Intent(context,Bat.class);
-                startActivity(bat);
+        AdaptadorItem adaptador=new AdaptadorItem(GeekZone.this, items);
+        lista.setAdapter(adaptador);
 
+        lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> array, View vista, int posicion,
+                                    long id) {
+                Item item=items.get(posicion);
+
+                TextView titulo=(TextView)vista.findViewById(R.id.titulo);
+                Log.e("Item seleccionado", titulo.getText().toString());
+
+                Intent video=new Intent(GeekZone.this,VideoPlayer.class);
+                video.putExtra("videoUrl",item.getLinkVideo());
+                startActivity(video);
             }
         });
-        imgGamer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent gamer= new Intent(context,Gamer.class);
-                startActivity(gamer);
-
-            }
-        });
-        imgOtaku.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent otaku= new Intent(context,Otaku.class);
-                startActivity(otaku);
-
-            }
-        });
-        imgRata.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent rata= new Intent(context,Rata.class);
-                startActivity(rata);
-
-            }
-        });
-
 
     }
 }

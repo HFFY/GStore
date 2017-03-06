@@ -12,151 +12,16 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
+        android:layout_weight="1"
         app:srcCompat="@android:drawable/bottom_bar" />
 
-    <ScrollView
+    <ListView
+        android:id="@+id/ListViewGeekZone"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
-        android:layout_weight="1">
+        android:layout_weight="1" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/lblBat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:padding="5dp"
-                android:text="Baticueva"
-                android:textColor="@android:color/white" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imgBat"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:padding="8dp"
-                    app:srcCompat="@drawable/bat" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Dentro de la oscura y deprabada cueva de nuestro amigo Batman encontrarás todo lo relacionado con comics." />
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/lblGamer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:padding="5dp"
-                android:text="Oasis Del Gamer"
-                android:textColor="@android:color/white" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imgGamer"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:padding="8dp"
-                    app:srcCompat="@drawable/gamer" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="En éste remanso de gamers podrás adquirir todo lo necesario para que tu experiencia durante el juego mejore." />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/lblOtaku"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:padding="5dp"
-                android:text="Aldea Escondida Del Otaku"
-                android:textColor="@android:color/white" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imgOtaku"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:padding="8dp"
-                    app:srcCompat="@drawable/otaku" />
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Si estás en busca de las esferas del dragon y necesitas provisiones para el camino... éste es el lugar para conseguir todo lo q necesita un otaku menos provisiones." />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/lblRata"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:padding="5dp"
-                android:text="Madriguera Del Niño Rata"
-                android:textColor="@android:color/white" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imgRata"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
-                    android:padding="8dp"
-                    app:srcCompat="@drawable/ninorata" />
-
-                <TextView
-                    android:id="@+id/textView16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:padding="5dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="... Y como olvidarme del Niño Rata." />
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>
