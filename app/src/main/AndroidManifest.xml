@@ -88,8 +88,17 @@
         <activity
             android:name=".GeekZone"
             android:label="GeekZone" />
-        <activity android:name=".Shooter"
-            android:label="Shooters"></activity>
+        <activity
+            android:name=".Shooter"
+            android:label="Shooters" />
+        <activity android:name=".Bat"
+            android:label="Baticueva"/>
+        <activity android:name=".Gamer"
+            android:label="Oasis Del Gamer"/>
+        <activity android:name=".Otaku"
+            android:label="Aldea Otaku"/>
+        <activity android:name=".Rata"
+            android:label="Madriguera Del Niño Rata"></activity>
     </application>
 
 </manifest>
