@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.hffy.gstore.Bat">
+    tools:context="com.example.hffy.gstore.Otaku">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        app:srcCompat="@drawable/broma" />
+        app:srcCompat="@drawable/baka" />
 </RelativeLayout>
