@@ -78,132 +78,176 @@ public class MenuPrincipal extends AppCompatActivity {
         imgAndroid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent android= new Intent(context,Android.class);
+                startActivity(android);
 
             }
         });
         imgCelular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent celular= new Intent(context,Celular.class);
+                startActivity(celular);
 
             }
         });
         imgWatch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent whatch= new Intent(context,Whatch.class);
+                startActivity(whatch);
 
             }
         });
         imgApple.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent apple= new Intent(context,Apple.class);
+                startActivity(apple);
 
             }
         });
         imgSamsung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent samsung= new Intent(context,Samsung.class);
+                startActivity(samsung);
 
             }
         });
         imgHuawei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent huawei= new Intent(context,Huawei.class);
+                startActivity(huawei);
 
             }
         });
         imgOferta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent oferta= new Intent(context,Oferta.class);
+                startActivity(oferta);
 
             }
         });
         imgComic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent comic= new Intent(context,Comic.class);
+                startActivity(comic);
 
             }
         });
         imgManga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent manga= new Intent(context,Manga.class);
+                startActivity(manga);
 
             }
         });
         imgPc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent pc= new Intent(context,Pc.class);
+                startActivity(pc);
 
             }
         });
         imgXbox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent xbox= new Intent(context,Xbox.class);
+                startActivity(xbox);
 
             }
         });
         imgNintendo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent nintendo= new Intent(context,Nintendo.class);
+                startActivity(nintendo);
 
             }
         });
         imgPs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent ps= new Intent(context,Ps.class);
+                startActivity(ps);
 
             }
         });
         imgAlien.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent alien= new Intent(context,Alien.class);
+                startActivity(alien);
 
             }
         });
         imgCombat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent combat= new Intent(context,Combat.class);
+                startActivity(combat);
 
             }
         });
         imgRpg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent rpg= new Intent(context,Rpg.class);
+                startActivity(rpg);
 
             }
         });
         imgShooter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent shooter= new Intent(context,Shooter.class);
+                startActivity(shooter);
 
             }
         });
         imgCarrera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent camera= new Intent(context,Carrera.class);
+                startActivity(camera);
 
             }
         });
         imgFight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent fight= new Intent(context,Fight.class);
+                startActivity(fight);
 
             }
         });
         imgArcade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent arcade= new Intent(context,Arcade.class);
+                startActivity(arcade);
 
             }
         });
         imgTerror.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent terror= new Intent(context,Terror.class);
+                startActivity(terror);
 
             }
         });
         imgDeportes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent deportes = new Intent(context,Deportes.class);
+                startActivity(deportes);
 
             }
         });

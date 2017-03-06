@@ -45,7 +45,9 @@ public class CrearUsuario extends AppCompatActivity {
 
                 //TODO : verificar que todo está lleno
 
-                if(Datos.getInstance().crear(campo_usuario,campo_contraseña,campo_email,campo_celular,campo_codigo)){
+                //TODO : verificar q los dos espacios de contraseña sean iguales
+
+                if(Datos.getInstance().Crear(campo_usuario,campo_contraseña,campo_email,campo_celular,campo_codigo)){
 
                     Intent iniciar=new Intent(context,MainActivity.class);
                     startActivity(iniciar);

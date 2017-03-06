@@ -15,10 +15,81 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CrearUsuario" />
+        <activity
+            android:name=".CrearUsuario"
+            android:label="Crear Cuenta" />
         <activity android:name=".MenuPrincipal" />
-        <activity android:name=".Laptop" />
-        <activity android:name=".GeekZone"></activity>
+        <activity
+            android:name=".Laptop"
+            android:label="Laptops" />
+        <activity
+            android:name=".Android"
+            android:label="Celulares Android" />
+        <activity
+            android:name=".Celular"
+            android:label="Todos Los Celulares" />
+        <activity
+            android:name=".Whatch"
+            android:label="Smart Whatch" />
+        <activity
+            android:name=".Apple"
+            android:label="Apple" />
+        <activity
+            android:name=".Samsung"
+            android:label="Samsung" />
+        <activity
+            android:name=".Huawei"
+            android:label="Huawei" />
+        <activity
+            android:name=".Oferta"
+            android:label="Zona de Ofertas" />
+        <activity
+            android:name=".Comic"
+            android:label="Comics" />
+        <activity
+            android:name=".Manga"
+            android:label="Manga" />
+        <activity
+            android:name=".Pc"
+            android:label="Juegos De Computadora" />
+        <activity
+            android:name=".Xbox"
+            android:label="Xbox" />
+        <activity
+            android:name=".Nintendo"
+            android:label="Nintendo" />
+        <activity
+            android:name=".Ps"
+            android:label="PlayStation" />
+        <activity
+            android:name=".Alien"
+            android:label="Alienware" />
+        <activity
+            android:name=".Combat"
+            android:label="Combat Games" />
+        <activity
+            android:name=".Rpg"
+            android:label="RPG" />
+        <activity
+            android:name=".Carrera"
+            android:label="Racing Games" />
+        <activity
+            android:name=".Fight"
+            android:label="Fight Games" />
+        <activity
+            android:name=".Arcade"
+            android:label="Arcade Games" />
+        <activity
+            android:name=".Terror"
+            android:label="Horror Games" />
+        <activity
+            android:name=".Deportes"
+            android:label="Sport Games" />
+        <activity
+            android:name=".GeekZone"
+            android:label="GeekZone" />
+        <activity android:name=".Shooter"
+            android:label="Shooters"></activity>
     </application>
 
 </manifest>

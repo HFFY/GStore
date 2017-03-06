@@ -59,6 +59,24 @@
                 android:padding="8dp" />
 
             <TextView
+                android:text="Verificar Contraseña:"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:id="@+id/verificar"
+                android:textColor="@android:color/white"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:layout_margin="9dp"
+                android:id="@+id/txtVerificarPass"
+                android:background="@android:color/white"
+                android:padding="8dp" />
+
+            <TextView
                 android:text="Email:"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

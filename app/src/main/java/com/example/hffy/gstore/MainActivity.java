@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 String campo_usuario = txtUsuario.getText().toString();
                 String campo_password = txtPassword.getText().toString();
 
-                if(Datos.getInstance().usuario(campo_usuario,campo_password)){
+                if(Datos.getInstance().Usuario(campo_usuario,campo_password)){
 
                     Intent menu=new Intent(context,MenuPrincipal.class);
                     startActivity(menu);

@@ -55,13 +55,13 @@ public class Datos extends SQLiteOpenHelper {
     }
 
 
-    public boolean usuario(String u, String p){
+    public boolean Usuario(String u, String p){
         //TODO Verificar Usuarios Existentes
 
         return true;
     }
 
-    public boolean crear(String uss,String pass,String email,String celular,String codigo){
+    public boolean Crear(String uss,String pass,String email,String celular,String codigo){
         //TODO Almacenar un nuevo Usuario con todos sus datos
         return true;
     }
