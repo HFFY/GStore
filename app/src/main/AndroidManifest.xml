@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.hffy.gstore">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
 
     <application
         android:allowBackup="true"
@@ -93,16 +96,22 @@
         <activity
             android:name=".Shooter"
             android:label="Shooters" />
-        <activity android:name=".Bat"
-            android:label="Baticueva"/>
-        <activity android:name=".Gamer"
-            android:label="Oasis Del Gamer"/>
-        <activity android:name=".Otaku"
-            android:label="Aldea Otaku"/>
-        <activity android:name=".VideoPlayer"
-            android:label="Video"/>
-        <activity android:name=".Rata"
-            android:label="Madriguera Del Niño Rata"></activity>
+        <activity
+            android:name=".Bat"
+            android:label="Baticueva" />
+        <activity
+            android:name=".Gamer"
+            android:label="Oasis Del Gamer" />
+        <activity
+            android:name=".Otaku"
+            android:label="Aldea Otaku" />
+        <activity
+            android:name=".VideoPlayer"
+            android:label="Video" />
+        <activity
+            android:name=".Rata"
+            android:label="Madriguera Del Niño Rata" />
+        <activity android:name=".Youtube"></activity>
     </application>
 
 </manifest>

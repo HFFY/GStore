@@ -34,6 +34,7 @@ public class Datos extends SQLiteOpenHelper {
     }
 
     public Datos(Context context){
+        
         super(context, DATABASE_NAME,null,DATABASE_VERSION);
     }
 
