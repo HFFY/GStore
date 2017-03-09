@@ -13,8 +13,10 @@ import android.content.Intent;
 
 public class Youtube extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
 
+    private String url;
+
     public static final String API_KEY = "AIzaSyDHnGqm7Vm_V7oo6zXYEp_ZIQSA9gOFOx4";
-    private static final String VIDEO_ID = "zQFM1c9uPBQ";
+    private String VIDEO_ID;
     private static final int RECOVERY_DIALOG_REQUEST = 1;
 
     YouTubePlayerFragment myYouTubePlayerFragment;
@@ -24,7 +26,14 @@ public class Youtube extends YouTubeBaseActivity implements YouTubePlayer.OnInit
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_youtube);
+        Intent intent = getIntent();
+
+
+        url=intent.getStringExtra("videoUrl");
+
+        VIDEO_ID = url;
+
         myYouTubePlayerFragment = (YouTubePlayerFragment)getFragmentManager()
                 .findFragmentById(R.id.youtubeplayerfragment);
         myYouTubePlayerFragment.initialize(API_KEY, this);

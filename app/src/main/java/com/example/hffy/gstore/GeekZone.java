@@ -33,10 +33,10 @@ public class GeekZone extends AppCompatActivity {
         setContentView(R.layout.activity_geek_zone);
         ListView lista=(ListView)findViewById(R.id.ListViewGeekZone);
 
-        items.add(new Item(1, "Baticueva", "Dentro de la oscura y deprabada cueva de nuestro amigo Batman encontrarás todo lo relacionado con comics.", R.drawable.bat,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
-        items.add(new Item(2, "Oasis Gamer", "En éste remanso de gamers podrás adquirir todo lo necesario para que tu experiencia durante el juego mejore.", R.drawable.gamer,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
-        items.add(new Item(3, "Aldea Escondida Del Otaku", "Si estás en busca de las esferas del dragon y necesitas provisiones para el camino... éste es el lugar para conseguir todo lo q necesita un otaku menos provisiones.", R.drawable.otaku,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
-        items.add(new Item(4, "Madriguera Del Niño Rata", "... Y como olvidarme del Niño Rata.", R.drawable.ninorata,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
+        items.add(new Item(1, "Baticueva", "Dentro de la oscura y deprabada cueva de nuestro amigo Batman encontrarás todo lo relacionado con comics.", R.drawable.bat,"zQFM1c9uPBQ"));
+        items.add(new Item(2, "Oasis Gamer", "En éste remanso de gamers podrás adquirir todo lo necesario para que tu experiencia durante el juego mejore.", R.drawable.gamer,"zQFM1c9uPBQ"));
+        items.add(new Item(3, "Aldea Escondida Del Otaku", "Si estás en busca de las esferas del dragon y necesitas provisiones para el camino... éste es el lugar para conseguir todo lo q necesita un otaku menos provisiones.", R.drawable.otaku,"zQFM1c9uPBQ"));
+        items.add(new Item(4, "Madriguera Del Niño Rata", "... Y como olvidarme del Niño Rata.", R.drawable.ninorata,"zQFM1c9uPBQ"));
 
         AdaptadorItem adaptador=new AdaptadorItem(GeekZone.this, items);
         lista.setAdapter(adaptador);
@@ -49,9 +49,13 @@ public class GeekZone extends AppCompatActivity {
                 TextView titulo=(TextView)vista.findViewById(R.id.titulo);
                 Log.e("Item seleccionado", titulo.getText().toString());
 
-                Intent video=new Intent(GeekZone.this,VideoPlayer.class);
-                video.putExtra("videoUrl",item.getLinkVideo());
-                startActivity(video);
+                if(posicion==1){
+                    Intent video=new Intent(GeekZone.this,Bat.class);
+                    video.putExtra("videoUrl",item.getLinkVideo());
+                    startActivity(video);
+                }
+
+
             }
         });
 
