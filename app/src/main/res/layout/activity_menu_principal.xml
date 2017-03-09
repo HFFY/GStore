@@ -15,14 +15,26 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingTop="40dp">
+
+            <TextView
+                android:id="@+id/Titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center_horizontal"
+                android:text="Titulo"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:id="@+id/textView6"
@@ -114,9 +126,9 @@
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
                 android:padding="8dp"
                 android:text="GEEK"
-                android:background="@color/colorPrimary"
                 android:textColor="@android:color/white" />
 
             <HorizontalScrollView
@@ -275,9 +287,6 @@
             </HorizontalScrollView>
 
 
-
-
-
             <ImageView
                 android:id="@+id/imgGeekzone"
                 android:layout_width="262dp"
@@ -288,4 +297,13 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/cerrar"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Titulo"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Cerrar sesion" />
 </RelativeLayout>
