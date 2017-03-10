@@ -8,7 +8,7 @@
     tools:context="com.example.hffy.gstore.Laptop">
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imgLaptop1"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_margin="15dp"

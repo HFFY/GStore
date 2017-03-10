@@ -22,10 +22,12 @@ public class Laptop extends AppCompatActivity {
         setContentView(R.layout.activity_laptop);
         ListView lista=(ListView)findViewById(R.id.listViewLaptop);
 
-        items.add(new Item(1, "Icono", "Esta es la descripcion del icono", R.drawable.bat,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
-        items.add(new Item(2, "Play", "Esta es la descripcion de Play", android.R.drawable.ic_media_play,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
-        items.add(new Item(3, "Galeria", "Esta es la descripcion de Galeria", android.R.drawable.ic_menu_gallery,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
-        items.add(new Item(4, "Nuevo", "Esta es la descripcion de Nuevo", android.R.drawable.ic_menu_more,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
+        items.add(new Item(1, "Chromebook", "Laptop relativamente pequeña recomendada para un uso diario sin mucha exigencia ", R.drawable.lapchromebook,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
+        items.add(new Item(2, "Omen", "Latop dedicada para gamers,con un alto rendimiento en videojuegos", R.drawable.lapomen,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
+        items.add(new Item(3, "Pavilion", "laptop de buen rendimiento que responde de manera eficiente a varias tareas", R.drawable.lappavilion,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
+        items.add(new Item(4, "Spectre", "Lo ultimo en calidad y procesamiento, laptop de ultima tecnología", R.drawable.lapsectre,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
+        items.add(new Item(5, "Spectre360", "A diferenia de la spectre normal, esta brinda mas comodidad al poder rotar en 360", R.drawable.lapspectre360,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
+        items.add(new Item(6, "Envy", "Laptop de media calidad recomendable para el uso casual ", R.drawable.laptopenvy,"http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"));
 
         AdaptadorItem adaptador=new AdaptadorItem(Laptop.this, items);
         lista.setAdapter(adaptador);
