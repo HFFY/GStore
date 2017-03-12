@@ -49,12 +49,6 @@ public class GeekZone extends AppCompatActivity {
                 TextView titulo=(TextView)vista.findViewById(R.id.titulo);
                 Log.e("Item seleccionado", titulo.getText().toString());
 
-                if(posicion==1){
-                    Intent video=new Intent(GeekZone.this,Bat.class);
-                    video.putExtra("videoUrl",item.getLinkVideo());
-                    startActivity(video);
-                }
-
 
             }
         });
