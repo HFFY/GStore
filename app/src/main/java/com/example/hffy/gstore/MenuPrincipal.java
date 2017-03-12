@@ -40,7 +40,7 @@ public class MenuPrincipal extends AppCompatActivity {
     private ImageView imgGeekzone;
 
     private TextView titulo;
-    private Button cerrar;
+    private TextView cerrar;
 
 
 
@@ -75,7 +75,7 @@ public class MenuPrincipal extends AppCompatActivity {
         imgGeekzone=(ImageView)findViewById(R.id.imgGeekzone);
 
         titulo=(TextView)findViewById(R.id.Titulo);
-        cerrar=(Button)findViewById(R.id.cerrar);
+        cerrar=(TextView) findViewById(R.id.lblSalir);
 
         SharedPreferences prefs =
                 getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
