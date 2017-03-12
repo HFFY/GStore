@@ -7,18 +7,14 @@ public class Item {
 	protected String descripcion;
 	protected int imagen;
 	protected String linkVideo;
-	protected int imageng;
-	protected String descripciong;
 
-	public Item(int id, String titulo, String descripcion, int imagen, String linkVideo,int imageng,String descripciong)
+	public Item(int id, String titulo, String descripcion, int imagen, String linkVideo)
 	{
 		this.id=id;
 		this.titulo=titulo;
 		this.descripcion=descripcion;
 		this.imagen=imagen;
 		this.linkVideo=linkVideo;
-		this.imageng=imageng;
-		this.descripciong=descripciong;
 	}
 
 	public int getId() {
@@ -59,15 +55,5 @@ public class Item {
 
 	public void setLinkVideo(String linkVideo) {
 		this.linkVideo = linkVideo;
-	}
-
-	public int getImageng(){return imageng;}
-
-	public void setImageng(int imageng){this.imageng=imageng;}
-
-	public String getDescripciong(){return descripciong;}
-
-	public void setDescripciong(String descripciong) {
-		this.descripciong = descripciong;
 	}
 }

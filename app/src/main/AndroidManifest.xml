@@ -4,7 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
 
     <application
         android:allowBackup="true"
@@ -110,8 +111,7 @@
         <activity
             android:name=".Rata"
             android:label="Madriguera Del Niño Rata" />
-        <activity android:name=".Youtube" />
-        <activity android:name=".Producto"></activity>
+        <activity android:name=".Youtube"></activity>
     </application>
 
 </manifest>
