@@ -40,7 +40,7 @@ public class Producto extends AppCompatActivity {
         imgp= intent.getIntExtra("imgp",0);
         imgg= intent.getIntExtra("imgg",0);
         titulo=intent.getStringExtra("titulo");
-        descripcion=intent.getStringExtra("descripcion");
+        descripcion=intent.getStringExtra("decripcion");
 
         imgGrande=(ImageView)findViewById(R.id.imgGrande);
         imgPeque=(ImageView)findViewById(R.id.imgPeque);
