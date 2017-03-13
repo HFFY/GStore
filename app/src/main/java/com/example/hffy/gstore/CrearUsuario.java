@@ -1,7 +1,9 @@
 package com.example.hffy.gstore;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,28 +37,28 @@ public class CrearUsuario extends AppCompatActivity {
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View d) {
-                String campo_usuario = txtNuevoUsuario.getText().toString();
-                String campo_contraseña = txtNuevaPass.getText().toString();
-                String campo_email = txtEmail.getText().toString();
-                String campo_celular = txtCelular.getText().toString();
-                String campo_codigo = txtCodigo.getText().toString();
+                Datos admin=new Datos(context,"instituto",null,1);
+                SQLiteDatabase db=admin.getWritableDatabase();
+                String Usuario=txtNuevoUsuario.getText().toString();
+                String Contraseña =txtNuevaPass.getText().toString();
+                String Celular =txtCelular.getText().toString();
+                String Email =txtEmail.getText().toString();
+                String Codigo =txtCodigo.getText().toString();
 
-                //TODO : enviar datos a Datos para ser almacenados mediante Json
+                ContentValues values =new ContentValues();
+                values.put("Username",Usuario);
+                values.put("Conntraseña",Contraseña);
+                values.put("Celular",Celular);
+                values.put("Email",Email);
+                values.put("Numero de tarjeta",Codigo);
 
-                //TODO : verificar que todo está lleno
+                db.insert("Usuario",null,values);
+                db.close();
 
-                //TODO : verificar q los dos espacios de contraseña sean iguales
+                Intent iniciar=new Intent(context,MainActivity.class);
+                startActivity(iniciar);
 
-                if(Datos.getInstance().Crear(campo_usuario,campo_contraseña,campo_email,campo_celular,campo_codigo)){
 
-                    Intent iniciar=new Intent(context,MainActivity.class);
-                    startActivity(iniciar);
-
-                } else {
-
-                    //TODO mostrar mensaje de q no se pudo crear cuenta
-
-                }
             }
         });
 

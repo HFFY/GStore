@@ -99,16 +99,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        lblCrear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View c) {
+                Intent crear =new Intent(context,CrearUsuario.class);
+                startActivity(crear);
+            }
+        });
+
 
         }
 
-       //lblCrear.setOnClickListener(new View.OnClickListener() {
-       //    @Override
-       //    public void onClick(View c) {
-       //        Intent crear =new Intent(context,CrearUsuario.class);
-       //        startActivity(crear);
-       //    }
-       //});
+
 
 }
 
