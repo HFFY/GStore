@@ -1,6 +1,8 @@
 package com.example.hffy.gstore;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -87,8 +89,32 @@ public class MenuPrincipal extends AppCompatActivity {
 
         cerrar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),
-                        "Cerrando sesión.", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder Dialogo = new AlertDialog.Builder(MenuPrincipal.this);
+
+                Dialogo.setTitle("!ADVERTENCIA!");
+                Dialogo.setMessage("¿Estas serguro que deseas salir?");
+
+
+                Dialogo.setPositiveButton("Si",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getApplicationContext(),
+                                        "Cerrando sesión.", Toast.LENGTH_SHORT).show();
+                                Intent a = new Intent(getApplicationContext(), MainActivity.class);
+                                finish();
+                                startActivity(a);
+                            }
+                        });
+
+                Dialogo.setNegativeButton("No",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                Dialogo.show();
+
+
 
                 SharedPreferences prefs =
                         getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
@@ -96,9 +122,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 SharedPreferences.Editor editor = prefs.edit();
                 editor.clear();
                 editor.commit();
-                Intent a = new Intent(getApplicationContext(), MainActivity.class);
-                finish();
-                startActivity(a);
+
             }
         });
 
