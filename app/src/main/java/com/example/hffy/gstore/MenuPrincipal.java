@@ -54,7 +54,7 @@ public class MenuPrincipal extends AppCompatActivity {
         imgCelular=(ImageView)findViewById(R.id.imgCelular);
         imgWatch=(ImageView)findViewById(R.id.imgWatch);
         imgApple=(ImageView)findViewById(R.id.imgApple);
-        imgSamsung=(ImageView)findViewById(R.id.imgSamsung);
+        //imgSamsung=(ImageView)findViewById(R.id.imgSamsung);
         imgHuawei=(ImageView)findViewById(R.id.imgHuawei);
         imgOferta=(ImageView)findViewById(R.id.imgOfertas);
         imgComic=(ImageView)findViewById(R.id.imgComic);
@@ -142,6 +142,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
             }
         });
+        /*
         imgSamsung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,6 +151,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
             }
         });
+        */
         imgHuawei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

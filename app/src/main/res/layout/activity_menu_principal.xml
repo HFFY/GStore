@@ -94,13 +94,6 @@
                             app:srcCompat="@drawable/apple" />
 
                         <ImageView
-                            android:id="@+id/imgSamsung"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
-                            android:paddingRight="5dp"
-                            app:srcCompat="@drawable/samsung" />
-
-                        <ImageView
                             android:id="@+id/imgHuawei"
                             android:layout_width="60dp"
                             android:layout_height="60dp"

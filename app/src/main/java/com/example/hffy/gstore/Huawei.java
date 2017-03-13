@@ -20,7 +20,12 @@ public class Huawei extends AppCompatActivity {
         setContentView(R.layout.activity_huawei);
         ListView lista=(ListView)findViewById(R.id.ListViewHuawei);
 
-        items.add(new Item(1, " ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
+        items.add(new Item(1, "Huawei 8250", "Versión Android 5.1", R.drawable.hua8150," ", R.drawable.hua8150," "));
+        items.add(new Item(2, "Huawei 760", "Versión 4.4.4 - KitKat", R.drawable.huag760," ", R.drawable.huag760," "));
+        items.add(new Item(3, "Huawei novapluss", "Versión 6.0 Marshmallow", R.drawable.huanovaplus," ", R.drawable.huanovaplus," "));
+        items.add(new Item(4, "Huawei 210", "Versión 4.2.2 – Jelly Bean", R.drawable.huay210," ", R.drawable.huay210," "));
+        items.add(new Item(5, "Huawei 560", "Versión 5.1.1 - Lollipop", R.drawable.huay560," ", R.drawable.huay560," "));
+        items.add(new Item(6, "Huawei y-ii", "Versión 4.2.2 – Jelly Bean", R.drawable.huayii," ", R.drawable.huayii," "));
 
         AdaptadorItem adaptador=new AdaptadorItem(Huawei.this, items);
         lista.setAdapter(adaptador);
