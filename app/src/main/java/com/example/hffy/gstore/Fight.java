@@ -1,5 +1,6 @@
 package com.example.hffy.gstore;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,17 +9,49 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 
 import java.util.ArrayList;
 
 public class Fight extends AppCompatActivity {
     private ArrayList<Item> items=new ArrayList<Item>();
+    private SliderLayout sliderLayout;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fight);
         ListView lista=(ListView)findViewById(R.id.ListViewFight);
+
+        context=this;
+        sliderLayout=(SliderLayout)findViewById(R.id.sliderFight);
+
+        DefaultSliderView slider=new DefaultSliderView(context);
+        slider.image("https://userscontent2.emaze.com/images/8afd9e47-33b2-4a4e-843a-53c4af41a296/c7bff681-2555-4f43-9871-0ab383b0008b.jpg");
+        slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider);
+        DefaultSliderView slider1=new DefaultSliderView(context);
+        slider1.image("http://www.objetoslujosos.com/i/Resort-Cove-Atlantis.jpg");
+
+        slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider1);
+
+        sliderLayout.startAutoCycle();
 
         items.add(new Item(1, "For Honor", "El mundo de For Honor es duro, pero repleto de hermosas zonas vírgenes, lugares emblemáticos y majestuosas ruinas.", R.drawable.honorpeque,"y1HkuGUaNBY", R.drawable.honorgrande,"El mundo de For Honor es duro, pero repleto de hermosas zonas vírgenes, lugares emblemáticos y majestuosas ruinas. Sus habitantes subsisten como pueden, ya que viven en un estado de guerra casi perpetuo. Hace mil años, un cataclismo estuvo a punto de destruir todas las civilizaciones. Se hundieron patrias, ardieron imperios y naciones enteras marcharon al exilio. Pero los caballeros, los vikingos y los samuráis resurgieron de las cenizas de esta catástrofe. Se esforzaron por reconstruir sus naciones, y trataron de recuperar la gloria de sus ancestros. Forja un camino de destrucción en campos de batalla intensos y exhuberantes en For Honor, un nuevo y revolucionario juego de acción desarrollado por Ubisoft Montreal en colaboración con otros estudios de Ubisoft. For Honor saldrá a la venta el 14 de febrero de 2017 para el sistema PlayStation®4, Xbox One y PC. Atraviesa la niebla de la batalla y únete a valientes caballeros, brutales vikingos y mortíferos samuráis mientras combaten en increíbles y fascinantes mapas que te pondrán a prueba. Domina armas medievales y participa en un combate cuerpo a cuerpo rápido y brutal en una absorbente campaña con historia y en novedosos modos multijugador. El innovador sistema de control de For Honor, «The Art of Battle», te permite controlar por completo a tus héroes, que disponen de habilidades y armas exclusivas cuerpo a cuerpo. El combate, diseñado para ofrecer una sensación de duelo real sin sacrificar la accesibilidad y la simplicidad, se ha creado capturando el movimiento real de maestros de las artes marciales y dobles profesionales para dar vida a la acción como nunca antes."));
         items.add(new Item(2, "Mortal Kombat X", "Mortal Kombat X (abreviado MKX) es un videojuego de pelea creado por Ed Boon, desarrollado por NetherRealm Studios y publicado por Warner Bros.", R.drawable.mortalpeque,"jSi2LDkyKmI", R.drawable.mortalgrande,"Mortal Kombat X (abreviado MKX) es un videojuego de pelea creado por Ed Boon, desarrollado por NetherRealm Studios y publicado por Warner Bros. Interactive Entertainment, fue anunciado en junio de 2014, mediante un vídeo que mostraba a Sub-Zero y Scorpion peleando entre sí. Está disponible para PlayStation 4, Xbox One y PC desde el 14 de abril de 2015; para iOS desde el 7 de abril de 2015 y para el Android desde el 21 de abril de 2015. El eslogan oficial es: \"Who's next?\" (lit. ¿Quién sigue?). Es el décimo videojuego de la serie, sin contar expansiones, crossovers y juegos de aventura. El juego también se encontraba en desarrollo para las consolas Xbox 360 y PlayStation 3, pero su desarrollo fue eventualmente cancelado por Netherrealm."));

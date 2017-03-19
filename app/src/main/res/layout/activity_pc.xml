@@ -6,14 +6,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.hffy.gstore.Pc">
-    <ImageView
-        android:id="@+id/imgpc1"
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/sliderPc"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/pcrec" />
+        android:layout_height="200dp"/>
 
     <ListView
         android:id="@+id/ListViewPc"

@@ -1,5 +1,6 @@
 package com.example.hffy.gstore;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,17 +9,50 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
+
 public class Oferta extends AppCompatActivity {
     private ArrayList<Item> items=new ArrayList<Item>();
+    private SliderLayout sliderLayout;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_oferta);
         ListView lista=(ListView)findViewById(R.id.ListViewOferta);
+
+        context=this;
+        sliderLayout=(SliderLayout)findViewById(R.id.sliderOferta);
+
+        DefaultSliderView slider=new DefaultSliderView(context);
+        slider.image("https://userscontent2.emaze.com/images/8afd9e47-33b2-4a4e-843a-53c4af41a296/c7bff681-2555-4f43-9871-0ab383b0008b.jpg");
+        slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider);
+        DefaultSliderView slider1=new DefaultSliderView(context);
+        slider1.image("http://www.objetoslujosos.com/i/Resort-Cove-Atlantis.jpg");
+
+        slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider1);
+
+        sliderLayout.startAutoCycle();
+
 
         items.add(new Item(1, "Fifa 17", "FIFA 17 es un videojuego de fútbol desarrollado por EA Canada y publicado por EA Sports ", R.drawable.fifapeque,"7QQpmwmKh4w", R.drawable.fifagrande,"FIFA 17 es un videojuego de fútbol desarrollado por EA Canada y publicado por EA Sports. Es el 24.º de la serie y salió a la venta el 28 de septiembre del 2016 en Norteamérica y el 29 de septiembre para el resto del mundo. Este será el primer juego de la FIFA en la serie en emplear el motor de juego Frostbite. Además, este será el primer videojuego de la serie que tendrá la aparición e interacción de entrenadores de fútbol.También la incorporación del modo historia con Alex Hunter. El 21 de julio de 2016, Marco Reus fue elegido para ser la imagen de la portada oficial del videojuego"));
         items.add(new Item(2, "Madden NFL 07 ", "Madden NFL 07 es un videojuego de fútbol americano basado en la NFL que fue publicado por EA Sports y desarrollado por EA Tiburon", R.drawable.maddenpeque,"IXaMhAP5jPs", R.drawable.maddengrande,"Madden NFL 07 es un videojuego de fútbol americano basado en la NFL que fue publicado por EA Sports y desarrollado por EA Tiburon. Es el primero de la serie de videojuegos que será lanzado para las consolas PlayStation 3 y Wii y el último en ser lanzado en el Game Boy Advance. Ex Seattle Seahawks corriendo Shaun Alexander está en la portada. Este es el último juego para presentar NFL Europa en la serie."));
@@ -47,4 +81,24 @@ public class Oferta extends AppCompatActivity {
             }
         });
     }
+
+    /*
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        //getMenuInflater().inflate(R.menu.menu_activity_zxing, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home) {
+            finish();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+    */
 }

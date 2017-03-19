@@ -7,14 +7,10 @@
     android:orientation="vertical"
     tools:context="com.example.hffy.gstore.Rpg">
 
-    <ImageView
-        android:id="@+id/imgRpg1"
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/sliderRpg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/rpg1" />
+        android:layout_height="200dp"/>
 
     <ListView
         android:id="@+id/ListViewRpg"

@@ -1,5 +1,6 @@
 package com.example.hffy.gstore;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,17 +9,49 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 
 import java.util.ArrayList;
 
 public class Pc extends AppCompatActivity {
     private ArrayList<Item> items=new ArrayList<Item>();
+    private SliderLayout sliderLayout;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pc);
         ListView lista=(ListView)findViewById(R.id.ListViewPc);
+
+        context=this;
+        sliderLayout=(SliderLayout)findViewById(R.id.sliderPc);
+
+        DefaultSliderView slider=new DefaultSliderView(context);
+        slider.image("https://userscontent2.emaze.com/images/8afd9e47-33b2-4a4e-843a-53c4af41a296/c7bff681-2555-4f43-9871-0ab383b0008b.jpg");
+        slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider);
+        DefaultSliderView slider1=new DefaultSliderView(context);
+        slider1.image("http://www.objetoslujosos.com/i/Resort-Cove-Atlantis.jpg");
+
+        slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider1);
+
+        sliderLayout.startAutoCycle();
 
         items.add(new Item(1, "Mass Effect Andromeda", " Nos permitirá explorar una nueva galaxia", R.drawable.mass1,"X6PJEmEHIaY", R.drawable.mass2,"Por fin se pondrá a la venta en primavera de 2017 tras varios retrasos y lo hará en PC, PS4 y Xbox One. Recientemente, y aprovechando la gala de The Game Awards, BioWare presentó el primer gameplay de esta nueva entrega de Mass Effect que nos permitirá explorar una nueva galaxia, disfrutar de nuevos personajes y enfrentarnos a nuevos y peligrosos enemigos. "));
         items.add(new Item(2, "Quake Champions ", " ", R.drawable.quake1,"-UhHcEiegb8", R.drawable.quake2,"es un FPS (videojuego de disparos en primera persona) exclusivo para PC que promete recuperar la esencia de la franquicia, pero incorporando nuevos elementos. El juego está siendo desarrollado por id Software, responsables de DOOM, y, aunque todavía no cuenta con una fecha de lanzamiento concreta, se le espera para 2017. "));

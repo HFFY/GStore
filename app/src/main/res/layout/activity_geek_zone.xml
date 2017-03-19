@@ -8,14 +8,10 @@
     android:background="@color/colorYellow"
     tools:context="com.example.hffy.gstore.GeekZone">
 
-    <ImageView
-        android:id="@+id/imgGeekzone1"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:layout_weight="1"
-        app:srcCompat="@android:drawable/bottom_bar" />
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/sliderGeekzone"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
 
     <ListView
         android:id="@+id/ListViewGeekZone"

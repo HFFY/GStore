@@ -1,5 +1,6 @@
 package com.example.hffy.gstore;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,17 +9,49 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 
 import java.util.ArrayList;
 
 public class Combat extends AppCompatActivity {
     private ArrayList<Item> items=new ArrayList<Item>();
+    private SliderLayout sliderLayout;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_combat);
         ListView lista=(ListView)findViewById(R.id.ListViewCombat);
+
+        context=this;
+        sliderLayout=(SliderLayout)findViewById(R.id.sliderCombat);
+
+        DefaultSliderView slider=new DefaultSliderView(context);
+        slider.image("https://userscontent2.emaze.com/images/8afd9e47-33b2-4a4e-843a-53c4af41a296/c7bff681-2555-4f43-9871-0ab383b0008b.jpg");
+        slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider);
+        DefaultSliderView slider1=new DefaultSliderView(context);
+        slider1.image("http://www.objetoslujosos.com/i/Resort-Cove-Atlantis.jpg");
+
+        slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider1);
+
+        sliderLayout.startAutoCycle();
 
         items.add(new Item(1, "Dota 2", "Dota 2 es un juego multijugador de estrategia en tiempo real, distribuido por la plataforma Steam de Valve, en el cual dos equipos de cinco jugadores tienen el objetivo de destruir las estructuras rivales controlando a personajes denominados héroes.", R.drawable.dotapeque,"cSFPIwMEq4", R.drawable.dotagrande,"Dota 2 es un juego multijugador de estrategia en tiempo real, distribuido por la plataforma Steam de Valve, en el cual dos equipos de cinco jugadores tienen el objetivo de destruir las estructuras rivales controlando a personajes denominados héroes. Ellos no pueden controlar las estructuras ni a las unidades que aparecen cada cierto tiempo. Siempre se juega en un mismo mapa que tiene dos lados: Radiant y Dire, cada uno de ellos presenta ventajas y desventajas respecto a la visión, unidades neutrales y posicionamiento. Hay tres líneas donde chocan unidades no controladas: arriba, abajo y medio. Se pueden elegir más de 90 héroes, lo que permite bastante flexibilidad al estilo de juego. Por ello se considera que Dota 2 tiene una curva de aprendizaje bastante alta, debido a todas las mecánicas presentes en los personajes y en el mapa. Asimismo, cada héroe tiene ciertas habilidades y estadísticas (fuerza, agilidad e inteligencia) que modifican su ataque, vida y mana. Cada cierto tiempo, parches buscan balancear el juego para evitar abusos de ciertas estrategias."));
         items.add(new Item(2, "HearthStone", "Hearthstone es un juego de cartas de estrategia online gratuito con el que puede divertirse cualquiera.", R.drawable.hearthpeque,"QdXl3QtutQI", R.drawable.hearthgrande,"Hearthstone es un juego de cartas de estrategia online gratuito con el que puede divertirse cualquiera. Los jugadores eligen entre uno de nueve héroes épicos de Warcraft y luego juegan por turnos usando cartas de su mazo personalizado para lanzar potentes hechizos, usar armas o facultades heroicas, o invocar a poderosos esbirros para aplastar al enemigo.\n" +

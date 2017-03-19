@@ -7,13 +7,10 @@
     android:layout_height="match_parent"
     tools:context="com.example.hffy.gstore.Laptop">
 
-    <ImageView
-        android:id="@+id/imgLaptop1"
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/sliderLaptop"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_margin="15dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/laptopsrec" />
+        android:layout_height="200dp"/>
 
     <ListView
         android:layout_width="match_parent"

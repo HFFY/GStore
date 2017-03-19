@@ -1,5 +1,6 @@
 package com.example.hffy.gstore;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,11 +9,18 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 
 import java.util.ArrayList;
 
 public class Terror extends AppCompatActivity {
     private ArrayList<Item> items=new ArrayList<Item>();
+    private SliderLayout sliderLayout;
+    private Context context;
 
 
     @Override
@@ -20,6 +28,31 @@ public class Terror extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_terror);
         ListView lista=(ListView)findViewById(R.id.ListViewTerror);
+
+        context=this;
+        sliderLayout=(SliderLayout)findViewById(R.id.sliderTerror);
+
+        DefaultSliderView slider=new DefaultSliderView(context);
+        slider.image("https://userscontent2.emaze.com/images/8afd9e47-33b2-4a4e-843a-53c4af41a296/c7bff681-2555-4f43-9871-0ab383b0008b.jpg");
+        slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider);
+        DefaultSliderView slider1=new DefaultSliderView(context);
+        slider1.image("http://www.objetoslujosos.com/i/Resort-Cove-Atlantis.jpg");
+
+        slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider1);
+
+        sliderLayout.startAutoCycle();
 
         items.add(new Item(1, "Amnesia The Dark Descent", "De manera similar a los anteriores juegos desarrollados por la compañía, Amnesia es un juego de aventura basado en la exploración y con una perspectiva en primera persona.", R.drawable.amnesiapeque,"mAgyxK_r2eM", R.drawable.amnesiagrande,"De manera similar a los anteriores juegos desarrollados por la compañía, Amnesia es un juego de aventura basado en la exploración y con una perspectiva en primera persona. El jugador no tiene acceso a armas, y debe utilizar su ingenio para evitar las truculentas criaturas que habitan el castillo de Brennenburg o bien esconderse de ellos. El juego además mantiene la interacción física con objetos utilizada en Penumbra, permitiendo puzles físicos avanzados como apertura de puertas y arreglos de maquinaria. Debido a esto, el jugador debe utilizar su ingenio para escapar y ocultarse de los monstruos hasta que pasen de largo. Se recomienda utilizar la oscuridad para ocultarse. Existen cuatro tipos de criaturas, o enemigos: Los siervos gruñidores, los primeros en aparecer; los siervos brutos, parecidos a los anteriores, pero con partes metálicas en su cuerpo y son más fuertes y peligrosos; los kaernk, son criaturas invisibles que habitan en el agua y se les visualiza al moverse en ella; y la Sombra, el cual persigue a Daniel durante unas zonas específicas del juego. Los tejidos rojos revelan su anterior presencia por el lugar."));
         items.add(new Item(2, "Emily Wants To Play", "Emily Wants To Play es un videojuego de terror de supervivencia creado por el desarrollador indie Shawn Hitchcock.", R.drawable.emilypeque,"IkpiWd3ftGk", R.drawable.emilygrande,"Emily Wants To Play es un videojuego de terror de supervivencia creado por el desarrollador indie Shawn Hitchcock. El juego fue lanzado para Microsoft Windows y OS X el 10 de diciembre de 2015. Luego fue lanzado para iOS y Android el 31 de enero de 2016, PlayStation 4 el 9 de agosto de 2016 y Xbox One el 9 de septiembre de 2016. Emily quiere El juego fue adaptado para jugar en la realidad virtual usando el HTC Vive o Oculus Rift el 25 de agosto de 2016.\n" +

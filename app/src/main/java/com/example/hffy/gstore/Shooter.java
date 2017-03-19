@@ -1,5 +1,6 @@
 package com.example.hffy.gstore;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,17 +9,49 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 
 import java.util.ArrayList;
 
 public class Shooter extends AppCompatActivity {
     private ArrayList<Item> items=new ArrayList<Item>();
+    private SliderLayout sliderLayout;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shooter);
         ListView lista=(ListView)findViewById(R.id.ListViewShooter);
+
+        context=this;
+        sliderLayout=(SliderLayout)findViewById(R.id.sliderShooter);
+
+        DefaultSliderView slider=new DefaultSliderView(context);
+        slider.image("https://userscontent2.emaze.com/images/8afd9e47-33b2-4a4e-843a-53c4af41a296/c7bff681-2555-4f43-9871-0ab383b0008b.jpg");
+        slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider);
+        DefaultSliderView slider1=new DefaultSliderView(context);
+        slider1.image("http://www.objetoslujosos.com/i/Resort-Cove-Atlantis.jpg");
+
+        slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider1);
+
+        sliderLayout.startAutoCycle();
 
         items.add(new Item(1, "Counter Strike Global Offensive", "Counter-Strike cogió la industria de los videojuegos por sorpresa cuando, contra todo pronóstico, el MOD se convirtió en el juego de acción online para PC", R.drawable.cspeque,"edYCtaNueQY", R.drawable.csgrande,"Counter-Strike cogió la industria de los videojuegos por sorpresa cuando, contra todo pronóstico, el MOD se convirtió en el juego de acción online para PC más jugado del mundo tras su lanzamiento en agosto de 1999, dijo Doug Lombardi de Valve. “En los últimos 12 años, ha continuado siendo uno de los juegos más jugados del mundo, el protagonista de los torneos de videojuegos competitivos y se han vendido más de 25 millones de copias por todo el mundo."));
         items.add(new Item(2, "FarCry 4", "El comienzo de Far Cry 4 es en sí mismo una buena metáfora de a lo que aspira el juego. Atentos, que así abre la historia", R.drawable.farpeque,"6d60v1OErEY", R.drawable.fargrande,"El comienzo de Far Cry 4 es en sí mismo una buena metáfora de a lo que aspira el juego. Atentos, que así abre la historia. Tu personaje, Ajay Ghale, recorre sus primeros minutos en Kyrat, esa región ficticia que recuerda mucho al Himalaya, en autobús. Sus padres eran de ahí, pero Ajay se ha criado en los Estados Unidos. Unos soldados examinan el vehículo y de repente algo va mal, empiezan a volar balas y te secuestran. Pagan Min, el villano de la aventura, te destripa rápidamente parte del argumento -pero cuesta seguirlo, no sabes qué está pasando. Casi ni te cuentan por qué estás en Kyrat. Sabemos, por los miles de tráilers que ha lanzado Ubisoft, que queremos esparcir las cenizas de nuestra madre. Pero no queda claro en ningún momento."));
