@@ -22,7 +22,9 @@
         <activity
             android:name=".CrearUsuario"
             android:label="Crear Cuenta" />
-        <activity android:name=".MenuPrincipal" />
+        <activity
+            android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar"
+            android:name=".MenuPrincipal" />
         <activity
             android:name=".Laptop"
             android:label="Laptops" />
