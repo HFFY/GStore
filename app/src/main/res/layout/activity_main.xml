@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorAccent"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.example.hffy.gstore.MainActivity">
 
     <LinearLayout
@@ -22,7 +22,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginRight="11dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorB2"
         android:layout_marginEnd="11dp"
 
         android:id="@+id/btnLogin">
@@ -39,6 +39,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/lblUsuario"
             android:padding="8dp"
+            android:background="@color/primary"
+            android:layout_margin="8dp"
             android:textColor="@android:color/white" />
 
         <EditText
@@ -49,6 +51,7 @@
             android:id="@+id/txtUsuario"
             android:padding="10dp"
             android:layout_marginTop="10dp"
+            android:backgroundTint="@color/colorAccent"
             android:layout_margin="8dp"
             android:background="@android:color/white" />
 
@@ -58,6 +61,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/lblPassword"
             android:padding="8dp"
+            android:background="@color/primary"
+            android:layout_margin="8dp"
             android:textColor="@android:color/white" />
 
         <EditText
@@ -66,6 +71,7 @@
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/txtPassword"
+            android:backgroundTint="@color/colorAccent"
             android:padding="10dp"
             android:layout_marginTop="10dp"
             android:layout_margin="8dp"
@@ -83,6 +89,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnEnviar"
             android:layout_marginTop="10dp"
+            android:background="@color/primary"
             android:padding="15dp" />
 
         <TextView
@@ -92,6 +99,7 @@
             android:id="@+id/lblCrear"
             android:layout_gravity="right"
             android:padding="8dp"
+            android:background="@color/colorAccent"
             android:textColor="@android:color/white" />
 
     </LinearLayout>

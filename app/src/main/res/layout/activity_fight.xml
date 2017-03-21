@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorB2"
     tools:context="com.example.hffy.gstore.Fight">
 
     <com.daimajia.slider.library.SliderLayout

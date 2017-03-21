@@ -37,7 +37,7 @@
                 android:ems="10"
                 android:layout_margin="9dp"
                 android:id="@+id/txtNuevoUsuario"
-                android:background="@android:color/white"
+                android:background="@color/colorB2"
                 android:padding="8dp" />
 
             <TextView
@@ -55,7 +55,7 @@
                 android:ems="10"
                 android:layout_margin="9dp"
                 android:id="@+id/txtNuevaPass"
-                android:background="@android:color/white"
+                android:background="@color/colorB2"
                 android:padding="8dp" />
 
             <TextView
@@ -73,7 +73,7 @@
                 android:ems="10"
                 android:layout_margin="9dp"
                 android:id="@+id/txtVerificarPass"
-                android:background="@android:color/white"
+                android:background="@color/colorB2"
                 android:padding="8dp" />
 
             <TextView
@@ -91,7 +91,7 @@
                 android:ems="10"
                 android:layout_margin="9dp"
                 android:id="@+id/txtEmail"
-                android:background="@android:color/white"
+                android:background="@color/colorB2"
                 android:padding="8dp" />
 
             <TextView
@@ -109,7 +109,7 @@
                 android:ems="10"
                 android:layout_margin="9dp"
                 android:id="@+id/txtCelular"
-                android:background="@android:color/white"
+                android:background="@color/colorB2"
                 android:padding="8dp" />
 
             <TextView
@@ -127,7 +127,7 @@
                 android:ems="10"
                 android:layout_margin="9dp"
                 android:id="@+id/txtCodigo"
-                android:background="@android:color/white"
+                android:background="@color/colorB2"
                 android:padding="8dp" />
 
             <Button
@@ -135,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnCrear"
+                android:background="@color/primary"
                 android:layout_gravity="center"/>
 
         </LinearLayout>

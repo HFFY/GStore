@@ -32,7 +32,7 @@ public class Carrera extends AppCompatActivity {
         sliderLayout=(SliderLayout)findViewById(R.id.sliderCarrera);
 
         DefaultSliderView slider=new DefaultSliderView(context);
-        slider.image("https://userscontent2.emaze.com/images/8afd9e47-33b2-4a4e-843a-53c4af41a296/c7bff681-2555-4f43-9871-0ab383b0008b.jpg");
+        slider.image(R.drawable.revoltgrande);
         slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
@@ -41,7 +41,7 @@ public class Carrera extends AppCompatActivity {
         });
         sliderLayout.addSlider(slider);
         DefaultSliderView slider1=new DefaultSliderView(context);
-        slider1.image("http://www.objetoslujosos.com/i/Resort-Cove-Atlantis.jpg");
+        slider1.image(R.drawable.crashgrande);
 
         slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override

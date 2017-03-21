@@ -36,24 +36,44 @@ public class GeekZone extends AppCompatActivity {
         sliderLayout=(SliderLayout)findViewById(R.id.sliderGeekzone);
 
         DefaultSliderView slider=new DefaultSliderView(context);
-        slider.image("https://userscontent2.emaze.com/images/8afd9e47-33b2-4a4e-843a-53c4af41a296/c7bff681-2555-4f43-9871-0ab383b0008b.jpg");
+        slider.image(R.drawable.bat);
         slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
             }
         });
         sliderLayout.addSlider(slider);
-        DefaultSliderView slider1=new DefaultSliderView(context);
-        slider1.image("http://www.objetoslujosos.com/i/Resort-Cove-Atlantis.jpg");
 
+        DefaultSliderView slider1=new DefaultSliderView(context);
+        slider1.image(R.drawable.gamer);
         slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
             }
         });
         sliderLayout.addSlider(slider1);
+
+        DefaultSliderView slider2=new DefaultSliderView(context);
+        slider2.image(R.drawable.otaku);
+        slider2.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider2);
+
+        DefaultSliderView slider3=new DefaultSliderView(context);
+        slider3.image(R.drawable.ninorata);
+        slider3.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider3);
 
         sliderLayout.startAutoCycle();
 

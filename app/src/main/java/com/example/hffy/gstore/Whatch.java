@@ -35,24 +35,64 @@ public class Whatch extends AppCompatActivity {
         sliderLayout=(SliderLayout)findViewById(R.id.sliderWhatch);
 
         DefaultSliderView slider=new DefaultSliderView(context);
-        slider.image("https://userscontent2.emaze.com/images/8afd9e47-33b2-4a4e-843a-53c4af41a296/c7bff681-2555-4f43-9871-0ab383b0008b.jpg");
+        slider.image(R.drawable.iwapple);
         slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
             }
         });
         sliderLayout.addSlider(slider);
-        DefaultSliderView slider1=new DefaultSliderView(context);
-        slider1.image("http://www.objetoslujosos.com/i/Resort-Cove-Atlantis.jpg");
 
+        DefaultSliderView slider1=new DefaultSliderView(context);
+        slider1.image(R.drawable.iwgstek);
         slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
             }
         });
         sliderLayout.addSlider(slider1);
+
+        DefaultSliderView slider2=new DefaultSliderView(context);
+        slider2.image(R.drawable.iwsony);
+        slider2.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider2);
+
+        DefaultSliderView slider3=new DefaultSliderView(context);
+        slider3.image(R.drawable.iwlatec);
+        slider3.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider3);
+
+        DefaultSliderView slider4=new DefaultSliderView(context);
+        slider4.image(R.drawable.iwhamswan);
+        slider4.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider4);
+
+        DefaultSliderView slider5=new DefaultSliderView(context);
+        slider5.image(R.drawable.iwsmx);
+        slider5.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+            @Override
+            public void onSliderClick(BaseSliderView baseSliderView) {
+                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+            }
+        });
+        sliderLayout.addSlider(slider5);
 
         sliderLayout.startAutoCycle();
 

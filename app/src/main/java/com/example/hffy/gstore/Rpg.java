@@ -32,21 +32,21 @@ public class Rpg extends AppCompatActivity {
         sliderLayout=(SliderLayout)findViewById(R.id.sliderRpg);
 
         DefaultSliderView slider=new DefaultSliderView(context);
-        slider.image("https://userscontent2.emaze.com/images/8afd9e47-33b2-4a4e-843a-53c4af41a296/c7bff681-2555-4f43-9871-0ab383b0008b.jpg");
+        slider.image(R.drawable.diablogrande);
         slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
             }
         });
         sliderLayout.addSlider(slider);
         DefaultSliderView slider1=new DefaultSliderView(context);
-        slider1.image("http://www.objetoslujosos.com/i/Resort-Cove-Atlantis.jpg");
+        slider1.image(R.drawable.wargrande);
 
         slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
             }
         });
         sliderLayout.addSlider(slider1);
