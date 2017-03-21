@@ -23,8 +23,8 @@
             android:name=".CrearUsuario"
             android:label="Crear Cuenta" />
         <activity
-            android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar"
-            android:name=".MenuPrincipal" />
+            android:name=".MenuPrincipal"
+            android:theme="@style/MaterialDrawerTheme.Light.DarkToolbar" />
         <activity
             android:name=".Laptop"
             android:label="Laptops" />
@@ -112,8 +112,12 @@
         <activity
             android:name=".Rata"
             android:label="Madriguera Del Niño Rata" />
-        <activity android:name=".Youtube" />
-        <activity android:name=".Producto"></activity>
+        <activity
+            android:name=".Youtube"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Producto" />
+        <activity android:name=".VEnta"
+            android:label="Comprar"></activity>
     </application>
 
 </manifest>

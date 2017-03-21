@@ -230,10 +230,6 @@ public class MenuPrincipal extends AppCompatActivity {
                 .withSelectedItem(0)
                 .withSavedInstance(savedInstanceState)
                 .build();
-
-        //Al inicializar se selecciona el primer item
-        seleccionartItem(DRAWER_ITEM_UNO);
-
         //Hasta
 
         imgLaptop.setOnClickListener(new View.OnClickListener() {

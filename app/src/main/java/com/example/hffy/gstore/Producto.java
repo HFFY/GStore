@@ -23,6 +23,7 @@ public class Producto extends AppCompatActivity {
     private ImageView imgEstrella3;
     private ImageView imgEstrella4;
     private ImageView imgEstrella5;
+    private ImageView imgCarrito;
     private TextView lblTitulo;
     private TextView lblDescripcion;
     private Context context;
@@ -49,6 +50,7 @@ public class Producto extends AppCompatActivity {
         imgEstrella3=(ImageView)findViewById(R.id.imgEstrella3);
         imgEstrella4=(ImageView)findViewById(R.id.imgEstrella4);
         imgEstrella5=(ImageView)findViewById(R.id.imgEstrella5);
+        imgCarrito=(ImageView)findViewById(R.id.imgCarrito);
         lblTitulo=(TextView)findViewById(R.id.lblTitulo);
         lblDescripcion=(TextView)findViewById(R.id.lblDescripcion);
 
@@ -66,6 +68,15 @@ public class Producto extends AppCompatActivity {
             public void onClick(View v) {
                 Intent pru = new Intent(Producto.this,Youtube.class);
                 pru.putExtra("videoUrl",url);
+                startActivity(pru);
+            }
+        });
+        imgCarrito.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pru = new Intent(Producto.this,VEnta.class);
+                pru.putExtra("imagen",imgp);
+                pru.putExtra("titulo",titulo);
                 startActivity(pru);
             }
         });
