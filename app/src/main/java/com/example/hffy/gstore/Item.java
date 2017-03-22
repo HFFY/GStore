@@ -8,11 +8,13 @@ public class Item {
 	protected int imagen;
 	protected String linkVideo;
 	protected int imageng;
+	protected int precio;
 	protected String descripciong;
 
-	public Item(int id, String titulo, String descripcion, int imagen, String linkVideo,int imageng,String descripciong)
+	public Item(int id,int precio, String titulo, String descripcion, int imagen, String linkVideo,int imageng,String descripciong)
 	{
 		this.id=id;
+		this.precio=precio;
 		this.titulo=titulo;
 		this.descripcion=descripcion;
 		this.imagen=imagen;
@@ -27,6 +29,14 @@ public class Item {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
 	}
 
 	public String getTitulo() {

@@ -20,7 +20,7 @@ public class Rata extends AppCompatActivity {
         setContentView(R.layout.activity_rata);
         ListView lista=(ListView)findViewById(R.id.ListViewAlien);
 
-        items.add(new Item(1, " ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
+        items.add(new Item(1, 123," ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
 
         AdaptadorItem adaptador=new AdaptadorItem(Rata.this, items);
         lista.setAdapter(adaptador);
@@ -38,6 +38,7 @@ public class Rata extends AppCompatActivity {
                 producto.putExtra("imgg",item.getImageng());
                 producto.putExtra("titulo",item.getTitulo());
                 producto.putExtra("decripcion",item.getDescripciong());
+                producto.putExtra("precio", item.getPrecio());
                 startActivity(producto);
             }
         });

@@ -53,7 +53,7 @@ public class Samsung extends AppCompatActivity {
 
         sliderLayout.startAutoCycle();
 
-        items.add(new Item(1, " ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
+        items.add(new Item(1,123, " ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
 
         AdaptadorItem adaptador=new AdaptadorItem(Samsung.this, items);
         lista.setAdapter(adaptador);
@@ -71,6 +71,7 @@ public class Samsung extends AppCompatActivity {
                 producto.putExtra("imgg",item.getImageng());
                 producto.putExtra("titulo",item.getTitulo());
                 producto.putExtra("decripcion",item.getDescripciong());
+                producto.putExtra("precio", item.getPrecio());
                 startActivity(producto);
             }
         });

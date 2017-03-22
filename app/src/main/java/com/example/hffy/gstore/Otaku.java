@@ -20,7 +20,7 @@ public class Otaku extends AppCompatActivity {
         setContentView(R.layout.activity_otaku);
         ListView lista=(ListView)findViewById(R.id.ListViewOtaku);
 
-        items.add(new Item(1, " ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
+        items.add(new Item(1,123, " ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
 
         AdaptadorItem adaptador=new AdaptadorItem(Otaku.this, items);
         lista.setAdapter(adaptador);
@@ -38,6 +38,7 @@ public class Otaku extends AppCompatActivity {
                 producto.putExtra("imgg",item.getImageng());
                 producto.putExtra("titulo",item.getTitulo());
                 producto.putExtra("decripcion",item.getDescripciong());
+                producto.putExtra("precio", item.getPrecio());
                 startActivity(producto);
             }
         });

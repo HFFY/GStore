@@ -13,6 +13,7 @@ public class Producto extends AppCompatActivity {
     private String url;
     private int imgp;
     private int imgg;
+    private int precio;
     private String titulo;
     private String descripcion;
 
@@ -37,9 +38,10 @@ public class Producto extends AppCompatActivity {
         getSupportActionBar().hide();
         context=this;
 
-        //todos los intents para extraer las imagenes
+        //todos los intents para extraer las cosas :v
         Intent intent = getIntent();
         url=intent.getStringExtra("videoUrl");
+        precio=intent.getIntExtra("precio",0);
         imgp= intent.getIntExtra("imgp",0);
         imgg= intent.getIntExtra("imgg",0);
         titulo=intent.getStringExtra("titulo");

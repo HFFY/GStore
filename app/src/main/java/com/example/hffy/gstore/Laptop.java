@@ -95,12 +95,12 @@ public class Laptop extends AppCompatActivity {
 
         sliderLayout.startAutoCycle();
 
-        items.add(new Item(1, "Chromebook", "Laptop relativamente pequeña recomendada para un uso diario sin mucha exigencia ", R.drawable.lapchromebook," ", R.drawable.lapchromebook," "));
-        items.add(new Item(2, "Omen", "Latop dedicada para gamers,con un alto rendimiento en videojuegos", R.drawable.lapomen," ", R.drawable.lapomen," "));
-        items.add(new Item(3, "Pavilion", "laptop de buen rendimiento que responde de manera eficiente a varias tareas", R.drawable.lappavilion," ", R.drawable.lappavilion," "));
-        items.add(new Item(4, "Spectre", "Lo ultimo en calidad y procesamiento, laptop de ultima tecnología", R.drawable.lapsectre," ", R.drawable.lapsectre," "));
-        items.add(new Item(5, "Spectre360", "A diferenia de la spectre normal, esta brinda mas comodidad al poder rotar en 360", R.drawable.lapspectre360," ", R.drawable.lapspectre360," "));
-        items.add(new Item(6, "Envy", "Laptop de media calidad recomendable para el uso casual ", R.drawable.laptopenvy," ", R.drawable.laptopenvy," "));
+        items.add(new Item(1, 123,"Chromebook", "Laptop relativamente pequeña recomendada para un uso diario sin mucha exigencia ", R.drawable.lapchromebook," ", R.drawable.lapchromebook," "));
+        items.add(new Item(2, 123,"Omen", "Latop dedicada para gamers,con un alto rendimiento en videojuegos", R.drawable.lapomen," ", R.drawable.lapomen," "));
+        items.add(new Item(3, 123,"Pavilion", "laptop de buen rendimiento que responde de manera eficiente a varias tareas", R.drawable.lappavilion," ", R.drawable.lappavilion," "));
+        items.add(new Item(4, 123,"Spectre", "Lo ultimo en calidad y procesamiento, laptop de ultima tecnología", R.drawable.lapsectre," ", R.drawable.lapsectre," "));
+        items.add(new Item(5,123, "Spectre360", "A diferenia de la spectre normal, esta brinda mas comodidad al poder rotar en 360", R.drawable.lapspectre360," ", R.drawable.lapspectre360," "));
+        items.add(new Item(6, 123,"Envy", "Laptop de media calidad recomendable para el uso casual ", R.drawable.laptopenvy," ", R.drawable.laptopenvy," "));
 
         AdaptadorItem adaptador=new AdaptadorItem(Laptop.this, items);
         lista.setAdapter(adaptador);
@@ -119,6 +119,7 @@ public class Laptop extends AppCompatActivity {
                 producto.putExtra("imgg",item.getImageng());
                 producto.putExtra("titulo",item.getTitulo());
                 producto.putExtra("decripcion",item.getDescripciong());
+                producto.putExtra("precio", item.getPrecio());
                 startActivity(producto);
             }
         });

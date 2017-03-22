@@ -96,12 +96,12 @@ public class Whatch extends AppCompatActivity {
 
         sliderLayout.startAutoCycle();
 
-        items.add(new Item(1, "IWatch", "Esta es la descripcion del icono", R.drawable.iwapple," ", R.drawable.iwapple," "));
-        items.add(new Item(2, "Gstek", "Smart Watch de la linea gstek bastante comodo con sistema operativo android", R.drawable.iwgstek," ", R.drawable.iwgstek," "));
-        items.add(new Item(3, " sony", "Smart Watch de sony con sistema operativo android", R.drawable.iwsony," ", R.drawable.iwsony," "));
-        items.add(new Item(4, "latec", "Smart Watch de precio mas economico con sistema operativo android", R.drawable.iwlatec," ", R.drawable.iwlatec," "));
-        items.add(new Item(5, "whamsvan", "Smart Watch dedicado a los que realizan deporte, utiliza android", R.drawable.iwhamswan," ", R.drawable.iwhamswan," "));
-        items.add(new Item(6, "smx", "Smart Watch parecido al whamsvan dirigido a las personas que realizan actividad física", R.drawable.iwsmx," ", R.drawable.iwsmx," "));
+        items.add(new Item(1,123, "IWatch", "Esta es la descripcion del icono", R.drawable.iwapple," ", R.drawable.iwapple," "));
+        items.add(new Item(2,123, "Gstek", "Smart Watch de la linea gstek bastante comodo con sistema operativo android", R.drawable.iwgstek," ", R.drawable.iwgstek," "));
+        items.add(new Item(3,123, " sony", "Smart Watch de sony con sistema operativo android", R.drawable.iwsony," ", R.drawable.iwsony," "));
+        items.add(new Item(4,123, "latec", "Smart Watch de precio mas economico con sistema operativo android", R.drawable.iwlatec," ", R.drawable.iwlatec," "));
+        items.add(new Item(5,123, "whamsvan", "Smart Watch dedicado a los que realizan deporte, utiliza android", R.drawable.iwhamswan," ", R.drawable.iwhamswan," "));
+        items.add(new Item(6,123, "smx", "Smart Watch parecido al whamsvan dirigido a las personas que realizan actividad física", R.drawable.iwsmx," ", R.drawable.iwsmx," "));
 
         AdaptadorItem adaptador=new AdaptadorItem(Whatch.this, items);
         lista.setAdapter(adaptador);
@@ -117,6 +117,7 @@ public class Whatch extends AppCompatActivity {
                 producto.putExtra("imgg",item.getImageng());
                 producto.putExtra("titulo",item.getTitulo());
                 producto.putExtra("decripcion",item.getDescripciong());
+                producto.putExtra("precio", item.getPrecio());
                 startActivity(producto);
 
             }

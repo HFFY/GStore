@@ -21,7 +21,7 @@ public class Gamer extends AppCompatActivity {
         setContentView(R.layout.activity_gamer);
         ListView lista=(ListView)findViewById(R.id.ListViewGamer);
 
-        items.add(new Item(1, " ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
+        items.add(new Item(1, 123," ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
 
         AdaptadorItem adaptador=new AdaptadorItem(Gamer.this, items);
         lista.setAdapter(adaptador);
@@ -39,6 +39,7 @@ public class Gamer extends AppCompatActivity {
                 producto.putExtra("imgg",item.getImageng());
                 producto.putExtra("titulo",item.getTitulo());
                 producto.putExtra("decripcion",item.getDescripciong());
+                producto.putExtra("precio", item.getPrecio());
                 startActivity(producto);
             }
         });

@@ -26,7 +26,7 @@ public class Bat extends AppCompatActivity {
         setContentView(R.layout.activity_bat);
         ListView lista=(ListView)findViewById(R.id.ListViewBat);
 
-        items.add(new Item(1, " ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
+        items.add(new Item(1, 123," ", " ", R.drawable.appleiphone," ", R.drawable.appleiphone," "));
 
         AdaptadorItem adaptador=new AdaptadorItem(Bat.this, items);
         lista.setAdapter(adaptador);
@@ -44,6 +44,7 @@ public class Bat extends AppCompatActivity {
                 producto.putExtra("imgg",item.getImageng());
                 producto.putExtra("titulo",item.getTitulo());
                 producto.putExtra("decripcion",item.getDescripciong());
+                producto.putExtra("precio", item.getPrecio());
                 startActivity(producto);
             }
         });

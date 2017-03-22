@@ -78,10 +78,10 @@ public class GeekZone extends AppCompatActivity {
         sliderLayout.startAutoCycle();
 
 
-        items.add(new Item(1, "Baticueva", "Dentro de la oscura y deprabada cueva de nuestro amigo Batman encontrarás todo lo relacionado con comics.", R.drawable.bat," ", R.drawable.bat," "));
-        items.add(new Item(2, "Oasis Gamer", "En éste remanso de gamers podrás adquirir todo lo necesario para que tu experiencia durante el juego mejore.", R.drawable.gamer," ", R.drawable.gamer," "));
-        items.add(new Item(3, "Aldea Escondida Del Otaku", "Si estás en busca de las esferas del dragon y necesitas provisiones para el camino... éste es el lugar para conseguir todo lo q necesita un otaku menos provisiones.", R.drawable.otaku," ", R.drawable.otaku," "));
-        items.add(new Item(4, "Madriguera Del Niño Rata", "... Y como olvidarme del Niño Rata.", R.drawable.ninorata," ", R.drawable.ninorata," "));
+        items.add(new Item(1, 123,"Baticueva", "Dentro de la oscura y deprabada cueva de nuestro amigo Batman encontrarás todo lo relacionado con comics.", R.drawable.bat," ", R.drawable.bat," "));
+        items.add(new Item(2, 123,"Oasis Gamer", "En éste remanso de gamers podrás adquirir todo lo necesario para que tu experiencia durante el juego mejore.", R.drawable.gamer," ", R.drawable.gamer," "));
+        items.add(new Item(3, 123,"Aldea Escondida Del Otaku", "Si estás en busca de las esferas del dragon y necesitas provisiones para el camino... éste es el lugar para conseguir todo lo q necesita un otaku menos provisiones.", R.drawable.otaku," ", R.drawable.otaku," "));
+        items.add(new Item(4, 123,"Madriguera Del Niño Rata", "... Y como olvidarme del Niño Rata.", R.drawable.ninorata," ", R.drawable.ninorata," "));
 
         AdaptadorItem adaptador=new AdaptadorItem(GeekZone.this, items);
         lista.setAdapter(adaptador);
@@ -108,6 +108,7 @@ public class GeekZone extends AppCompatActivity {
                 producto.putExtra("imgg",item.getImageng());
                 producto.putExtra("titulo",item.getTitulo());
                 producto.putExtra("decripcion",item.getDescripciong());
+                producto.putExtra("precio", item.getPrecio());
                 startActivity(producto);
             }
         });
