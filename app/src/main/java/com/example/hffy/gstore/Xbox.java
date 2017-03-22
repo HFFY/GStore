@@ -93,7 +93,7 @@ public class Xbox extends AppCompatActivity {
 
         sliderLayout.startAutoCycle();
 
-        items.add(new Item(1, "Ashen", "Ashen es un videojuego de supervivencia, combate y exploración de mundo abierto ", R.drawable.ashen,"4iIv0Rh_-q0", R.drawable.ashen1,"Ashen es un videojuego de supervivencia, combate y exploración de mundo abierto ambientado en un entorno de fantasía en desarrollo para la consola Xbox One.\n" +
+        items.add(new Item(1, "Ashen", "Ashen es un vide ojuego de supervivencia, combate y exploración de mundo abierto ", R.drawable.ashen,"4iIv0Rh_-q0", R.drawable.ashen1,"Ashen es un videojuego de supervivencia, combate y exploración de mundo abierto ambientado en un entorno de fantasía en desarrollo para la consola Xbox One.\n" +
                 "\n" +
                 "El juego está ambientado en un mundo sin sol, y cuenta la historia de un personaje que busca un hogar. El juego se describe como incluyendo la exploración del mundo abierto, la cooperación o la terminación con otros jugadores, y combate con en monstruos del mundo. El juego se presenta en una vista de tercera persona, con una presentación de gráficos de sombra de celda enmascarada.\n"));
         items.add(new Item(2, "Below", "Below se muestra un videojuego de aventura desarrollado por Capybara Games", R.drawable.below,"yARUhqPCjAw", R.drawable.below1,"Below se muestra un videojuego de aventura desarrollado por Capybara Games. Será publicado por Microsoft Studios para Microsoft Windows y Xbox One.\n" +
