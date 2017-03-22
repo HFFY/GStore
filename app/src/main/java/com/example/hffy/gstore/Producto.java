@@ -18,6 +18,8 @@ public class Producto extends AppCompatActivity {
 
     private ImageView imgGrande;
     private ImageView imgPeque;
+    private ImageView imgComunidad;
+    private ImageView imgComprar;
     private ImageView imgEstrella1;
     private ImageView imgEstrella2;
     private ImageView imgEstrella3;
@@ -45,6 +47,8 @@ public class Producto extends AppCompatActivity {
 
         imgGrande=(ImageView)findViewById(R.id.imgGrande);
         imgPeque=(ImageView)findViewById(R.id.imgPeque);
+        imgComunidad=(ImageView)findViewById(R.id.imgComunidad);
+        imgComprar=(ImageView)findViewById(R.id.imgComprar);
         imgEstrella1=(ImageView)findViewById(R.id.imgEstrella1);
         imgEstrella2=(ImageView)findViewById(R.id.imgEstrella2);
         imgEstrella3=(ImageView)findViewById(R.id.imgEstrella3);
@@ -80,5 +84,8 @@ public class Producto extends AppCompatActivity {
                 startActivity(pru);
             }
         });
+
+
+
     }
 }

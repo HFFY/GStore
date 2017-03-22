@@ -52,7 +52,7 @@
                 app:srcCompat="@drawable/bat" />
                 <TextView
                 android:id="@+id/lblCantidad"
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                     android:padding="15dp"
                 android:layout_height="match_parent"
                 android:text="TextView" />

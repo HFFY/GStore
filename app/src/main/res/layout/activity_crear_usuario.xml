@@ -112,29 +112,12 @@
                 android:background="@color/colorB2"
                 android:padding="8dp" />
 
-            <TextView
-                android:text="Numero De Tarjeta:"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:id="@+id/textView6"
-                android:textColor="@android:color/white" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:layout_margin="9dp"
-                android:id="@+id/txtCodigo"
-                android:background="@color/colorB2"
-                android:padding="8dp" />
-
             <Button
                 android:text="Crear Cuenta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnCrear"
+                android:layout_marginTop="20dp"
                 android:background="@color/primary"
                 android:layout_gravity="center"/>
 

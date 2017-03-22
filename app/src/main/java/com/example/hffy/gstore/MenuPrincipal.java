@@ -32,11 +32,9 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 public class MenuPrincipal extends AppCompatActivity {
 
     private ImageView imgLaptop;
-    private ImageView imgAndroid;
     private ImageView imgCelular;
     private ImageView imgWatch;
     private ImageView imgApple;
-    private ImageView imgSamsung;
     private ImageView imgHuawei;
     private ImageView imgOferta;
     private ImageView imgComic;
@@ -79,7 +77,6 @@ public class MenuPrincipal extends AppCompatActivity {
         setContentView(R.layout.activity_menu_principal);
         context=this;
         imgLaptop=(ImageView)findViewById(R.id.imgLaptop);
-        imgAndroid=(ImageView)findViewById(R.id.imgAndroid);
         imgCelular=(ImageView)findViewById(R.id.imgCelular);
         imgWatch=(ImageView)findViewById(R.id.imgWatch);
         imgApple=(ImageView)findViewById(R.id.imgApple);
@@ -164,7 +161,7 @@ public class MenuPrincipal extends AppCompatActivity {
         //Contenedor es el espacio central
         contenedor=(FrameLayout)findViewById(R.id.contenedor);
 
-        //Definimos el header
+        //Header
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withHeaderBackground(R.drawable.androidrec)
@@ -175,13 +172,13 @@ public class MenuPrincipal extends AppCompatActivity {
                 )
                 .build();
 
-        //Definimos el Navigacion Drawer
+        //Navigacion Drawer
         drawer = new DrawerBuilder(this)
                 .withToolbar(toolbar)
                 .withAccountHeader(headerResult)
                 .addDrawerItems(
                         new DividerDrawerItem(),
-                        //Deinimos los items de navegacion
+                        //Items de navegacion
                         new PrimaryDrawerItem().
                                 withIdentifier(DRAWER_ITEM_UNO).
                                 withName("Menu 1").
@@ -207,9 +204,9 @@ public class MenuPrincipal extends AppCompatActivity {
                                 withSelectedIconColor(getResources().getColor(R.color.colorAccent)).
                                 withIcon(FontAwesome.Icon.faw_calendar)
                 ).addStickyDrawerItems(
-                        //Este item se encuentra en la parte inferior
+                        //Parte inferior
                         new SecondaryDrawerItem()
-                                .withName("Menu 4")
+                                .withName("Cerrar Secion")
                                 .withIdentifier(DRAWER_ITEM_CUATRO)
                                 .withIcon(FontAwesome.Icon.faw_info)
                                 .withTextColor(getResources().getColor(R.color.primary))
@@ -240,14 +237,6 @@ public class MenuPrincipal extends AppCompatActivity {
 
             }
         });
-        imgAndroid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent android= new Intent(context,Android.class);
-                startActivity(android);
-
-            }
-        });
         imgCelular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -272,16 +261,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
             }
         });
-        /*
-        imgSamsung.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent samsung= new Intent(context,Samsung.class);
-                startActivity(samsung);
 
-            }
-        });
-        */
         imgHuawei.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
