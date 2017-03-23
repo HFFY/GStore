@@ -37,71 +37,35 @@ public class Celular extends AppCompatActivity {
 
         DefaultSliderView slider=new DefaultSliderView(context);
         slider.image(R.drawable.hua8150);
-        slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider);
 
         DefaultSliderView slider1=new DefaultSliderView(context);
         slider1.image(R.drawable.huag760);
-        slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider1);
 
         DefaultSliderView slider2=new DefaultSliderView(context);
         slider2.image(R.drawable.huanovaplus);
-        slider2.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider2);
 
         DefaultSliderView slider3=new DefaultSliderView(context);
         slider3.image(R.drawable.huay210);
-        slider3.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider3);
 
         DefaultSliderView slider4=new DefaultSliderView(context);
         slider4.image(R.drawable.huay560);
-        slider4.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider4);
 
         DefaultSliderView slider5=new DefaultSliderView(context);
         slider5.image(R.drawable.huayii);
-        slider5.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider5);
 
         sliderLayout.startAutoCycle();
 
         items.add(new Item(1, 123, "Huawei 8250", "Versión Android 5.1", R.drawable.hua8150,"etrdxzmR0Sg", R.drawable.hua8grande,"El Huawei P8 Lite tiene una superficie lisa y es delgado, tan solo 7.7 mm de grosor. Además, tiene un diseño minimalista sin muchos componentes curvos. Este Smartphone te proporciona una descarga de 150 Mbps gracias a su conexión a la exclusiva red 4G. Por otro lado, te sorprenderá el altavoz de audio del Huawei P8 Lite, gracias a su sistema de amplificación de audio inteligente que evita cortes de sonido. La pantalla es de 5 pulgadas y tiene una resolución de 1280 x 720 píxeles."));
-        items.add(new Item(2, 123,"Huawei 760", "Versión 4.4.4 - KitKat", R.drawable.huag760,"sZ7sW24RVo0", R.drawable.huag760grande,"El Huawei 760 ha sido creado por algunos de los mejores diseñadores industriales del mundo con el objetivo de obtener un diseño único y elegante. Demostrando la mejor calidad, elegancia y estilo. Este Smartphone es fabricado en una pieza única de aluminio de resistencia alta, con una pantalla de cristal de 5.2’’ con resolución 1080 x 1920 pixels para que disfrutes de unos colores vividos y una saturación del color del 96% y de alto contraste."));
+        items.add(new Item(2, 123,"Huawei 760", "Versión 4.4.4 - KitKat", R.drawable.huag760,"sZ7sW24RVo0", R.drawable.hua760grande,"El Huawei 760 ha sido creado por algunos de los mejores diseñadores industriales del mundo con el objetivo de obtener un diseño único y elegante. Demostrando la mejor calidad, elegancia y estilo. Este Smartphone es fabricado en una pieza única de aluminio de resistencia alta, con una pantalla de cristal de 5.2’’ con resolución 1080 x 1920 pixels para que disfrutes de unos colores vividos y una saturación del color del 96% y de alto contraste."));
         items.add(new Item(3, 123,"Huawei novapluss", "Versión 6.0 Marshmallow", R.drawable.huanovaplus," ", R.drawable.huanovagrande,"El Huawei Nova Plus tiene un diseño exquisito y minimalista, con curvas que se amoldan a la palma de tu mano, es elegante desde el ángulo que lo veas. Su cuerpo es metálico y su vidrio es de 2.5D de 151.8 mm de alto por 75.7 mm de ancho y 7.3 mm de espesor. Su pantalla es de 5.5’’ con resolución 1080 x 1920 pixeles para que disfrutes de todo el contenido que desees con nitidez y colores inigualables. "));
-        items.add(new Item(4, 123, "Huawei 210", "Versión 4.2.2 – Jelly Bean", R.drawable.huay210,"Vb-tXjtmHF0", R.drawable.huay2,"El Huawei 210 ha sido creado por algunos de los mejores diseñadores industriales del mundo con el objetivo de obtener un diseño único y elegante. Demostrando la mejor calidad, elegancia y estilo. Este Smartphone es fabricado en una pieza única de aluminio de resistencia alta, con una pantalla de cristal de 5.2’’ con resolución 1080 x 1920 pixels para que disfrutes de unos colores vividos y una saturación del color del 96% y de alto contraste."));
-        items.add(new Item(5, 123,"Huawei 560", "Versión 5.1.1 - Lollipop", R.drawable.huay560,"xswls-mdUr8", R.drawable.huay560grande,"El Huawei 560 es un Smartphone con un estilo nuevo, posee un procesador de 8 núcleos, 4 de 2.0 GHz y 4 de 1.7 GHz para una respuesta rápida y un hardware mejorado que incorpora soluciones innovadoras integradas en un elegante diseño de vanguardia. Posee 2 GB de memoria RAM y un almacenamiento interno de 16 GB, expandibles hasta 128 GB con tarjetas microSD. Además viene con el sistema operativo, con el que podrás descargar gran variedad de aplicaciones."));
+        items.add(new Item(4, 123, "Huawei 210", "Versión 4.2.2 – Jelly Bean", R.drawable.huay210,"Vb-tXjtmHF0", R.drawable.huay2grande,"El Huawei 210 ha sido creado por algunos de los mejores diseñadores industriales del mundo con el objetivo de obtener un diseño único y elegante. Demostrando la mejor calidad, elegancia y estilo. Este Smartphone es fabricado en una pieza única de aluminio de resistencia alta, con una pantalla de cristal de 5.2’’ con resolución 1080 x 1920 pixels para que disfrutes de unos colores vividos y una saturación del color del 96% y de alto contraste."));
+        items.add(new Item(5, 123,"Huawei 560", "Versión 5.1.1 - Lollipop", R.drawable.huay560,"xswls-mdUr8", R.drawable.huay560,"El Huawei 560 es un Smartphone con un estilo nuevo, posee un procesador de 8 núcleos, 4 de 2.0 GHz y 4 de 1.7 GHz para una respuesta rápida y un hardware mejorado que incorpora soluciones innovadoras integradas en un elegante diseño de vanguardia. Posee 2 GB de memoria RAM y un almacenamiento interno de 16 GB, expandibles hasta 128 GB con tarjetas microSD. Además viene con el sistema operativo, con el que podrás descargar gran variedad de aplicaciones."));
         items.add(new Item(6, 123,"Huawei y-ii", "Versión 4.2.2 – Jelly Bean", R.drawable.huayii,"gKTaJiWEnHY", R.drawable.huay2grande,"El Huawei Y II es un celular ligero que pesa 135 gr. Y sus medidas son 123.8 mm de alto por 72 mm de ancho y 8.9 mm de espesor. La pantalla táctil es de 5 pulgadas con resolución de 1280x720, en la cual podrás ver disfrutar de todo tu contenido favorito con una experiencia fluida y colores nítidos. Además, podrás navegar a gran velocidad ya que es compatible con la tecnología 4G."));
 
         AdaptadorItem adaptador=new AdaptadorItem(Celular.this, items);

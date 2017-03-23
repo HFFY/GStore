@@ -39,7 +39,7 @@ public class Apple extends AppCompatActivity {
         slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+
             }
         });
         sliderLayout.addSlider(slider);
@@ -49,7 +49,7 @@ public class Apple extends AppCompatActivity {
         slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
+
             }
         });
         sliderLayout.addSlider(slider1);
@@ -59,7 +59,7 @@ public class Apple extends AppCompatActivity {
         slider2.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+
             }
         });
         sliderLayout.addSlider(slider2);
@@ -69,7 +69,7 @@ public class Apple extends AppCompatActivity {
         slider3.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+
             }
         });
         sliderLayout.addSlider(slider3);
@@ -79,7 +79,7 @@ public class Apple extends AppCompatActivity {
         slider4.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+
             }
         });
         sliderLayout.addSlider(slider4);
@@ -89,7 +89,7 @@ public class Apple extends AppCompatActivity {
         slider5.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
             @Override
             public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+
             }
         });
         sliderLayout.addSlider(slider5);

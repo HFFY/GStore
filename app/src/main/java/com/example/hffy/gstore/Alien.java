@@ -34,62 +34,26 @@ public class Alien extends AppCompatActivity {
 
         DefaultSliderView slider=new DefaultSliderView(context);
         slider.image(R.drawable.alienlap1);
-        slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider);
 
         DefaultSliderView slider1=new DefaultSliderView(context);
         slider1.image(R.drawable.aurora1);
-        slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider1);
 
         DefaultSliderView slider2=new DefaultSliderView(context);
         slider2.image(R.drawable.area512);
-        slider2.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider2);
 
         DefaultSliderView slider3=new DefaultSliderView(context);
         slider3.image(R.drawable.graphicsamplifier2);
-        slider3.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider3);
 
         DefaultSliderView slider4=new DefaultSliderView(context);
         slider4.image(R.drawable.steammachine2);
-        slider4.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider4);
 
         DefaultSliderView slider5=new DefaultSliderView(context);
         slider5.image(R.drawable.alpha1);
-        slider5.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider5);
 
         sliderLayout.startAutoCycle();

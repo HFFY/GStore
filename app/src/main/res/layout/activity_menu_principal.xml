@@ -558,7 +558,11 @@
                     </LinearLayout>
                 </LinearLayout>
             </HorizontalScrollView>
-
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/sliderMenu"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
         </LinearLayout>
     </ScrollView>
 
