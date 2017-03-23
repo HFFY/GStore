@@ -98,10 +98,8 @@ public class MenuPrincipal extends AppCompatActivity {
         imgArcade=(ImageView)findViewById(R.id.imgArcade);
         imgTerror=(ImageView)findViewById(R.id.imgTerror);
         imgDeportes=(ImageView)findViewById(R.id.imgDeportes);
-        imgGeekzone=(ImageView)findViewById(R.id.imgGeekzone);
 
         titulo=(TextView)findViewById(R.id.Titulo);
-        cerrar=(TextView) findViewById(R.id.lblSalir);
 
         SharedPreferences prefs =
                 getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
@@ -110,12 +108,6 @@ public class MenuPrincipal extends AppCompatActivity {
         String usuario_almacenado = prefs.getString("txtUsuario","no");
 
         titulo.setText("Bienvenido: "+usuario_almacenado);
-
-        cerrar.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                logOut();
-            }
-        });
 
         //DESDE
 
@@ -148,7 +140,7 @@ public class MenuPrincipal extends AppCompatActivity {
                         //Items de navegacion
                         new PrimaryDrawerItem().
                                 withIdentifier(DRAWER_ITEM_UNO).
-                                withName("Menu 1").
+                                withName("DAtos de Usuario").
                                 withTextColor(getResources().getColor(R.color.primary)).
                                 withIconColor(getResources().getColor(R.color.primary)).
                                 withSelectedTextColor(getResources().getColor(R.color.colorAccent)).
@@ -156,20 +148,20 @@ public class MenuPrincipal extends AppCompatActivity {
                                 withIcon(FontAwesome.Icon.faw_home),
                         new PrimaryDrawerItem().
                                 withIdentifier(DRAWER_ITEM_DOS).
-                                withName("Menu 2").
+                                withName("En duda").
                                 withTextColor(getResources().getColor(R.color.primary)).
                                 withIconColor(getResources().getColor(R.color.primary)).
                                 withSelectedTextColor(getResources().getColor(R.color.colorAccent)).
                                 withSelectedIconColor(getResources().getColor(R.color.colorAccent)).
-                                withIcon(FontAwesome.Icon.faw_newspaper_o),
+                                withIcon(FontAwesome.Icon.faw_mars_stroke_v),
                         new PrimaryDrawerItem().
                                 withIdentifier(DRAWER_ITEM_TRES).
-                                withName("Menu 3").
+                                withName("About").
                                 withTextColor(getResources().getColor(R.color.primary)).
                                 withIconColor(getResources().getColor(R.color.primary)).
                                 withSelectedTextColor(getResources().getColor(R.color.colorAccent)).
                                 withSelectedIconColor(getResources().getColor(R.color.colorAccent)).
-                                withIcon(FontAwesome.Icon.faw_calendar)
+                                withIcon(FontAwesome.Icon.faw_newspaper_o)
                 ).addStickyDrawerItems(
                         //Parte inferior
                         new SecondaryDrawerItem()
@@ -365,13 +357,6 @@ public class MenuPrincipal extends AppCompatActivity {
 
             }
         });
-        imgGeekzone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent geekZone= new Intent(context, GeekZone.class);
-                startActivity(geekZone);
-            }
-        });
     }
 
     private void logOut() {
@@ -418,7 +403,27 @@ public class MenuPrincipal extends AppCompatActivity {
             case DRAWER_ITEM_UNO:
 
                 break;
-            //TODO 3: que me muestren un popup con sus nombre, About
+            case DRAWER_ITEM_DOS:
+
+                break;
+            case DRAWER_ITEM_TRES:
+                AlertDialog dialogo;
+                AlertDialog.Builder builder = new AlertDialog.Builder(MenuPrincipal.this);
+
+                builder.setTitle("G-Store V2.0 Creada Por:");
+                builder.setMessage("Hugo Flores\n" +
+                "Sergio Bellot\n"+
+                "Matheus Garcia Mesa");
+                dialogo = builder.create();
+                dialogo.getWindow().getAttributes().windowAnimations = R.style.transicion;
+                dialogo.show();
+                dialogo.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                    public void onCancel(DialogInterface dialog) {
+                        dialog.dismiss();
+                    }
+                });
+
+                break;
             case DRAWER_ITEM_CUATRO:
                 logOut();
                 break;
@@ -426,7 +431,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 break;
         }
 
-        Toast.makeText(context,"Selecciono el item N "+identificador,Toast.LENGTH_LONG).show();
+       // Toast.makeText(context,"Selecciono el item N "+identificador,Toast.LENGTH_LONG).show();
     }
 
     @Override

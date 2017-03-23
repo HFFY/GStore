@@ -559,27 +559,6 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
-
-            <ImageView
-                android:id="@+id/imgGeekzone"
-                android:layout_marginTop="10dp"
-                android:layout_width="262dp"
-                android:layout_height="129dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/geekzone" />
-
-            <TextView
-                android:id="@+id/lblSalir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="8dp"
-                android:background="@color/colorPrimaryDark"
-                android:layout_gravity="end"
-                android:layout_marginTop="10dp"
-                android:text="¿Cerrar Seción?"
-                android:textColor="@android:color/white" />
-
-
         </LinearLayout>
     </ScrollView>
 
