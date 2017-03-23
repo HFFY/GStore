@@ -51,7 +51,7 @@ public class CrearUsuario extends AppCompatActivity {
                 }else{
                     if(txtEmail.getText().toString().contains("@")&& txtEmail.getText().toString().contains(".")){
                         if(txtNuevaPass.getText().toString().equals(txtVerificarPass .getText().toString())){
-                            Datos admin=new Datos(context, VERSION);
+                            Datos admin=new Datos(context,"registros",null,VERSION);
                             SQLiteDatabase db=admin.getWritableDatabase();
 
                             String Usuario=txtNuevoUsuario.getText().toString();
@@ -60,22 +60,23 @@ public class CrearUsuario extends AppCompatActivity {
                             String Email =txtEmail.getText().toString();
 
                             ContentValues values =new ContentValues();
-                            values.put("Username",Usuario);
-                            values.put("Conntraseña",Contraseña);
+                            values.put("Usuario",Usuario);
+                            values.put("Contraseñas",Contraseña);
                             values.put("Celular",Celular);
                             values.put("Email",Email);
-
-
-                            db.insert("Usuario",null,values);
+                            db.insert("registros",null,values);
                             db.close();
+
+
 
                             Intent intent=new Intent(context,MainActivity.class);
                             Gson gson = new Gson();
-                            Usuario user = new Usuario(new String[]{txtNuevoUsuario.getText().toString(), txtNuevaPass.getText().toString(),
+                            Usuario usuario = new Usuario(new String[]{txtNuevoUsuario.getText().toString(), txtNuevaPass.getText().toString(),
                                     txtEmail.getText().toString(), txtCelular.getText().toString()});
-                            String userString = gson.toJson(user);
-                            intent.putExtra("user", userString);
+                            String userString = gson.toJson(usuario);
+                            intent.putExtra("registros", userString);
                             intent.putExtra("ver", true);
+
                             startActivity(intent);
                             finish();
 
@@ -100,6 +101,7 @@ public class CrearUsuario extends AppCompatActivity {
 
 
     }
+
  // Prueba de login con listas
 //    //variables locales
 //    private EditText et1,et2,et3,et4,et5,et6;
