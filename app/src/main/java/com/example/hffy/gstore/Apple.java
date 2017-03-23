@@ -133,7 +133,7 @@ public class Apple extends AppCompatActivity {
         items.add(new Item(3, 123,"MacBookpro", "Computadora portátil Apple dirigida especificamente a aquellos que desean un mejor rendimiento y capacidad de procesamiento", R.drawable.applemacbookpro,"2GftT2og8Uc", R.drawable.applemacbookpro," Descripcion con unboxing de la MaxbookPro en el video (click en la imgen)"));
         items.add(new Item(4, 123,"MacBook", "Computadora portátil de uso mas casual aunque sin dejar de ser bastante util y moderna", R.drawable.applemabook,"3OIftOhgTyw", R.drawable.applemabook,"Descripcion con unboxing de la Macbook en el video (click en la imgen)"));
         items.add(new Item(5, 123,"IPadMini", "Computadora de estilo tableta de tamaño mediano con sistema operativo IO's de uso mas familiar o de trabajo", R.drawable.appleipad,"VyvfDDSOrao", R.drawable.appleipad,"Descripcion con unboxing del IpadMini en el video (click en la imgen) "));
-        items.add(new Item(6, 123,"Iphone 7 Plus", "Celular de Apple de última generación bastante comodo y de multiples herramientas  ", R.drawable.appleiphone,"4-4Jz6Lr014", R.drawable.appleiphone,"Descripcion con unboxing del iphone 7 en el video (click en la imgen) "));
+        items.add(new Item(6, 123,"Iphone 7 Plus", "Celular de Apple de última generación bastante comodo y tambien de multiples herramientas  ", R.drawable.appleiphone,"4-4Jz6Lr014", R.drawable.appleiphone,"Descripcion con unboxing del iphone 7 en el video (click en la imgen) "));
         AdaptadorItem adaptador=new AdaptadorItem(Apple.this, items);
         lista.setAdapter(adaptador);
 
