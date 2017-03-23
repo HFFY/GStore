@@ -82,6 +82,7 @@ public class Producto extends AppCompatActivity {
             public void onClick(View v) {
                 Intent pru = new Intent(Producto.this,VEnta.class);
                 pru.putExtra("imagen",imgp);
+                pru.putExtra("precio",precio);
                 pru.putExtra("titulo",titulo);
                 startActivity(pru);
             }

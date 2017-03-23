@@ -25,6 +25,7 @@ public class VEnta extends AppCompatActivity {
     private TextView lblTitulo;
     private TextView lblCantidad;
     private int imgp;
+    private int precio;
     private String titulo;
     private Spinner spinner;
     private String[] opciones;
@@ -49,9 +50,12 @@ public class VEnta extends AppCompatActivity {
         Intent intent = getIntent();
         imgp= intent.getIntExtra("imagen",0);
         titulo=intent.getStringExtra("titulo");
+        precio= intent.getIntExtra("precio",0);
 
         imgCompra.setImageResource(imgp);
         lblTitulo.setText(titulo);
+        //Todo: volver precio a String
+        //lblCantidad.setText(precio);
 
         opciones=new String[]{"1","2","3","4","5","6","7"};
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, opciones);
@@ -60,7 +64,8 @@ public class VEnta extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> array, View vista,
                                        int posicion, long id) {
-                //Log.e("Cantidad Seleccionada", (String) array.getItemAtPosition(posicion));
+                precio=precio*posicion;
+                //lblCantidad.setText(precio);
                 //TODO: que multiplique el precio por la cantidad seleccionada
             }
 
