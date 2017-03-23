@@ -28,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
     private SQLiteDatabase db;
 
-
-
     public static final int VERSION = 1;
     private Usuario usuario;
     private String activeUser[] = new String[2];
@@ -46,32 +44,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         final Datos datos = new Datos(this,"registros",null,VERSION);
 
         db = datos.getWritableDatabase();
         ContentValues values = new ContentValues();
-
-
         //Buscamos el archivo de preferencias llamado MisPreferencias
         SharedPreferences prefs = getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
-
         //Si hay datos de usuarios almacenados se irá a menu principal.
         activeUser[0] = prefs.getString("Usuario", "");
         activeUser[1] = prefs.getString("Contraseña", "");
-        if(!(activeUser[0].equals("") && activeUser[1].equals(""))){
-
+        if(!(activeUser[0].matches("") || activeUser[1].matches(""))){
             Intent a=new Intent(getApplicationContext(),MenuPrincipal.class);
-            finish();
             startActivity(a);
-
-
+            finish();
         }
-
-
-
-
         try{
             Intent intent = getIntent();
             String userString = intent.getStringExtra("user");
@@ -88,9 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 db.close();
             }
         }catch(Exception e){
-
         }
-
         context=this;
         txtUsuario=(EditText)findViewById(R.id.txtUsuario);
         txtPassword=(EditText)findViewById(R.id.txtPassword);
@@ -111,10 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 if (nombre_ingresado.matches("") || password_ingresado.matches("")) {
                     Toast.makeText(getApplicationContext(),"Error deebe introducir Usuario y contraseña",Toast.LENGTH_LONG).show();
 
-
-
                 }else{
-
 
                     db = datos.getReadableDatabase();
 
@@ -130,22 +111,18 @@ public class MainActivity extends AppCompatActivity {
                             //Abrimos el archivo de preferencias
                             SharedPreferences prefs =
                                     getSharedPreferences("MisPreferencias",Context.MODE_PRIVATE);
-
                             //Editamos los campos existentes
                             SharedPreferences.Editor editor = prefs.edit();
                             editor.putString("txtUsuario", nombre_ingresado);
                             editor.putString("txtPassword", password_ingresado);
-
                             //Concretamos la edicion
                             editor.commit();
-
-
-
                             Toast.makeText(getApplicationContext(), "Usuario: " + nombre_ingresado + ", Password: " + password_ingresado, Toast.LENGTH_SHORT).show();
 
                             Intent a=new Intent(getApplicationContext(),MenuPrincipal.class);
                             startActivity(a);
                             finish();
+
                         }else{
                             Toast.makeText(context,"Usuario o contraseña incorrectos.", Toast.LENGTH_SHORT).show();
                         }
@@ -158,22 +135,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-
-
-
-
-                //String campo_usuario = txtUsuario.getText().toString();
-                //String campo_password = txtPassword.getText().toString();
-
-                //if(Datos.getInstance().Usuario(campo_usuario,campo_password)){
-                //
-                //    Intent menu=new Intent(context,MenuPrincipal.class);
-                //    startActivity(menu);
-                //} else {
-
-                //TODO: mostrar "Usuario incorrecto"
-
-                //}
             }
         });
 
@@ -182,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View c) {
                 Intent crear =new Intent(context,CrearUsuario.class);
                 startActivity(crear);
+
             }
         });
 
