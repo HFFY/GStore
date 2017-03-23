@@ -96,6 +96,38 @@ public class Apple extends AppCompatActivity {
 
         sliderLayout.startAutoCycle();
 
+        //TODO jalar desde db
+        /*
+            do{
+
+                final Item producto = new Item(......); // llenear atributos desde db
+                items.add(producto);
+
+                DefaultSliderView slider5=new DefaultSliderView(context);
+                    slider5.image(R.drawable.appleiphone);
+                    slider5.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
+                        @Override
+                        public void onSliderClick(BaseSliderView baseSliderView) {
+                                Item item=producto;
+                                TextView titulo=(TextView)vista.findViewById(R.id.titulo);
+                                Log.e("Item seleccionado", titulo.getText().toString());
+                                Intent producto =new Intent(Apple.this,Producto.class);
+                                producto.putExtra("videoUrl",item.getLinkVideo());
+                                producto.putExtra("imgp",item.getImagen());
+                                producto.putExtra("imgg",item.getImageng());
+                                producto.putExtra("titulo",item.getTitulo());
+                                producto.putExtra("decripcion",item.getDescripciong());
+                                producto.putExtra("precio", item.getPrecio());
+                                startActivity(producto);
+                                //Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    sliderLayout.addSlider(slider5);
+
+                while();
+         */
+
+
         items.add(new Item(1, 123,"Iphone", "lo ultimo en smart phones de la linea iphone con sistema operativo IO's en su ultima version", R.drawable.appleiphone,"DTh-I70X_YU", R.drawable.appleiphone,"Descripcion con unboxing del dispositivo Iphone en general en el video (click en la imgen) "));
         items.add(new Item(2, 123,"Imac", "Computadora de escritorio de la linea Apple bastante comoda y actual para el uso en casa o oficinas", R.drawable.appleimac,"yZp1heY3vCY", R.drawable.appleimac," Descripcion con unboxing del dispositivo IMac en el video (click en la imgen)"));
         items.add(new Item(3, 123,"MacBookpro", "Computadora portátil Apple dirigida especificamente a aquellos que desean un mejor rendimiento y capacidad de procesamiento", R.drawable.applemacbookpro,"2GftT2og8Uc", R.drawable.applemacbookpro," Descripcion con unboxing de la MaxbookPro en el video (click en la imgen)"));

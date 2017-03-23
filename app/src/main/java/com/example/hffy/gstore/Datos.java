@@ -1,5 +1,6 @@
 package com.example.hffy.gstore;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -22,6 +23,10 @@ public class Datos extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table registros(id integer primary key,Usuario text,Contraseñas integer,Celular integer, Email text )");
         Log.e("DB","Creado");
+
+        //TODO crear productos Apple (primera vez q se llame la db)
+        /*ContentValues apple1=new ContentValues();
+        db.insert("productos",null,apple1);*/
     }
 
     @Override

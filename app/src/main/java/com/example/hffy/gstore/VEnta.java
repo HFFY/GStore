@@ -65,7 +65,7 @@ public class VEnta extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> array, View vista,
                                        int posicion, long id) {
                 precio=precio*posicion;
-                //lblCantidad.setText(precio);
+                lblCantidad.setText(String.valueOf(precio));
                 //TODO: que multiplique el precio por la cantidad seleccionada
             }
 

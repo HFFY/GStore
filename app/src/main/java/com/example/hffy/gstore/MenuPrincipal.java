@@ -113,40 +113,7 @@ public class MenuPrincipal extends AppCompatActivity {
 
         cerrar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                AlertDialog.Builder Dialogo = new AlertDialog.Builder(MenuPrincipal.this);
-
-                Dialogo.setTitle("!ADVERTENCIA!");
-                Dialogo.setMessage("¿Estas serguro que deseas salir?");
-
-
-                Dialogo.setPositiveButton("Si",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(getApplicationContext(),
-                                        "Cerrando sesión.", Toast.LENGTH_SHORT).show();
-                                Intent a = new Intent(getApplicationContext(), MainActivity.class);
-                                finish();
-                                startActivity(a);
-                            }
-                        });
-
-                Dialogo.setNegativeButton("No",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-
-                            }
-                        });
-                Dialogo.show();
-
-
-
-                SharedPreferences prefs =
-                        getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
-
-                SharedPreferences.Editor editor = prefs.edit();
-                editor.clear();
-                editor.commit();
-
+                logOut();
             }
         });
 
@@ -407,11 +374,59 @@ public class MenuPrincipal extends AppCompatActivity {
         });
     }
 
+    private void logOut() {
+        AlertDialog.Builder Dialogo = new AlertDialog.Builder(MenuPrincipal.this);
+
+        Dialogo.setTitle("!ADVERTENCIA!");
+        Dialogo.setMessage("¿Estas serguro que deseas salir?");
+
+
+        Dialogo.setPositiveButton("Si",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(getApplicationContext(),
+                                "Cerrando sesión.", Toast.LENGTH_SHORT).show();
+                        Intent a = new Intent(getApplicationContext(), MainActivity.class);
+                        finish();
+                        startActivity(a);
+                    }
+                });
+
+        Dialogo.setNegativeButton("No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+        Dialogo.show();
+
+
+
+        SharedPreferences prefs =
+                getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.clear();
+        editor.commit();
+    }
+
     //Desde
     //Funcion de seleccion de item
-    private void seleccionartItem(int i)
+    private void seleccionartItem(int identificador)
     {
-        Toast.makeText(context,"Selecciono el item N "+i,Toast.LENGTH_LONG).show();
+        switch (identificador){
+            case DRAWER_ITEM_UNO:
+
+                break;
+            //TODO 3: que me muestren un popup con sus nombre, About
+            case DRAWER_ITEM_CUATRO:
+                logOut();
+                break;
+            default:
+                break;
+        }
+
+        Toast.makeText(context,"Selecciono el item N "+identificador,Toast.LENGTH_LONG).show();
     }
 
     @Override
