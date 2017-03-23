@@ -94,17 +94,17 @@ public class Alien extends AppCompatActivity {
 
         sliderLayout.startAutoCycle();
 
-        items.add(new Item(1,123,"Laptop", "Diseñado para la mejor experiencia de realidad virtual", R.drawable.alienlap, " ", R.drawable.alienlap1, " Diseñado para la mejor experiencia de realidad virtual con tecnología tobi\n" +
+        items.add(new Item(1,123,"Laptop", "Diseñado para la mejor experiencia de realidad virtual", R.drawable.alienlap, "9WLI9Hf5r0A", R.drawable.alienlap1, " Diseñado para la mejor experiencia de realidad virtual con tecnología tobi\n" +
                 " Intel® Core™ i7-7820HK\n"));
-        items.add(new Item(2,123,"Aurora", "Diseñada para realidad virtual y con sistema de enfriamiento liquido", R.drawable.aurora, " ", R.drawable.aurora1, " Diseñada para realidad virtual y con sistema de enfriamiento liquido\n" +
+        items.add(new Item(2,123,"Aurora", "Diseñada para realidad virtual y con sistema de enfriamiento liquido", R.drawable.aurora, "Oc6tSuwPQW0", R.drawable.aurora1, " Diseñada para realidad virtual y con sistema de enfriamiento liquido\n" +
                 "\n" +
                 " Intel® Core™ i7 Processor (4-core)\n"));
-        items.add(new Item(3, 123," Area 51", "Innovadora con diseño único y bastante poderosa para el procesamiento de juegos", R.drawable.area51, " ", R.drawable.area512, "Innovadora con diseño único y bastante poderosa para el procesamiento de juegos\n" +
+        items.add(new Item(3, 123," Area 51", "Innovadora con diseño único y bastante poderosa para el procesamiento de juegos", R.drawable.area51, "dTiX8AeG8Ng", R.drawable.area512, "Innovadora con diseño único y bastante poderosa para el procesamiento de juegos\n" +
                 "Intel® Core™ i7 Processor (10-core)\n "));
-        items.add(new Item(4, 123,"Alpha", "Ultimo en productos alienware", R.drawable.alpha, " ", R.drawable.alpha1, " Ultimo en productos alienware, básicamente no existe nada que no pueda correr a máxima calidad\n" +
+        items.add(new Item(4, 123,"Alpha", "Ultimo en productos alienware", R.drawable.alpha, "KHrJ9IA60MI", R.drawable.alpha1, " Ultimo en productos alienware, básicamente no existe nada que no pueda correr a máxima calidad\n" +
                 " Intel® Core™ i7 Processor (4-core)\n"));
-        items.add(new Item(5, 123,"Amplificador", "Juegos amplificados para un desempeño excelente", R.drawable.graphicsamplifier1, " ", R.drawable.graphicsamplifier2, "Todos tus juegos amplificados para un desempeño excelente compatible con alienware laptops y desktops"));
-        items.add(new Item(6, 123,"Steam Machine", "Al puro estilo alienware", R.drawable.steammachine1, " ", R.drawable.steammachine2, "Steam machine re diseñada al puro estilo alienware para poder disfrutar de todos tus juegos"));
+        items.add(new Item(5, 123,"Amplificador", "Juegos amplificados para un desempeño excelente", R.drawable.graphicsamplifier1, "ZRGrbTJ8k2k", R.drawable.graphicsamplifier2, "Todos tus juegos amplificados para un desempeño excelente compatible con alienware laptops y desktops"));
+        items.add(new Item(6, 123,"Steam Machine", "Al puro estilo alienware", R.drawable.steammachine1, "XXmBCP-fLuU", R.drawable.steammachine2, "Steam machine re diseñada al puro estilo alienware para poder disfrutar de todos tus juegos"));
 
 
         AdaptadorItem adaptador = new AdaptadorItem(Alien.this, items);
