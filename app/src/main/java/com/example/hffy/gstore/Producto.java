@@ -14,6 +14,7 @@ public class Producto extends AppCompatActivity {
     private int imgp;
     private int imgg;
     private int precio;
+    private int estrellas;
     private String titulo;
     private String descripcion;
 
@@ -29,6 +30,7 @@ public class Producto extends AppCompatActivity {
     private ImageView imgCarrito;
     private TextView lblTitulo;
     private TextView lblDescripcion;
+    private TextView lblPrecio;
     private Context context;
 
     @Override
@@ -49,8 +51,6 @@ public class Producto extends AppCompatActivity {
 
         imgGrande=(ImageView)findViewById(R.id.imgGrande);
         imgPeque=(ImageView)findViewById(R.id.imgPeque);
-        imgComunidad=(ImageView)findViewById(R.id.imgComunidad);
-        imgComprar=(ImageView)findViewById(R.id.imgComprar);
         imgEstrella1=(ImageView)findViewById(R.id.imgEstrella1);
         imgEstrella2=(ImageView)findViewById(R.id.imgEstrella2);
         imgEstrella3=(ImageView)findViewById(R.id.imgEstrella3);
@@ -65,6 +65,30 @@ public class Producto extends AppCompatActivity {
         imgGrande.setImageResource(imgg);
         lblTitulo.setText(titulo);
         lblDescripcion.setText(descripcion);
+        estrellas=(int)(Math.random()*5)+1;
+        if(estrellas==1){
+            imgEstrella1.setImageResource(R.drawable.estrella);
+        } else if(estrellas==2){
+            imgEstrella1.setImageResource(R.drawable.estrella);
+            imgEstrella2.setImageResource(R.drawable.estrella);
+        }else if(estrellas==3){
+            imgEstrella1.setImageResource(R.drawable.estrella);
+            imgEstrella2.setImageResource(R.drawable.estrella);
+            imgEstrella3.setImageResource(R.drawable.estrella);
+        }else if(estrellas==4){
+            imgEstrella1.setImageResource(R.drawable.estrella);
+            imgEstrella2.setImageResource(R.drawable.estrella);
+            imgEstrella3.setImageResource(R.drawable.estrella);
+            imgEstrella4.setImageResource(R.drawable.estrella);
+        }else {
+            imgEstrella1.setImageResource(R.drawable.estrella);
+            imgEstrella2.setImageResource(R.drawable.estrella);
+            imgEstrella3.setImageResource(R.drawable.estrella);
+            imgEstrella4.setImageResource(R.drawable.estrella);
+            imgEstrella5.setImageResource(R.drawable.estrella);
+        }
+
+
 
 
 

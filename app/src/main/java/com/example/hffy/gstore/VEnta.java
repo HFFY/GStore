@@ -1,7 +1,10 @@
 package com.example.hffy.gstore;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +17,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class VEnta extends AppCompatActivity {
 
@@ -54,8 +58,7 @@ public class VEnta extends AppCompatActivity {
 
         imgCompra.setImageResource(imgp);
         lblTitulo.setText(titulo);
-        //Todo: volver precio a String
-        //lblCantidad.setText(precio);
+        lblCantidad.setText(String.valueOf(precio));
 
         opciones=new String[]{"1","2","3","4","5","6","7"};
         ArrayAdapter<String> adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, opciones);
@@ -64,9 +67,7 @@ public class VEnta extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> array, View vista,
                                        int posicion, long id) {
-                precio=precio*posicion;
                 lblCantidad.setText(String.valueOf(precio));
-                //TODO: que multiplique el precio por la cantidad seleccionada
             }
 
             public void onNothingSelected(AdapterView<?> array) {
@@ -84,9 +85,40 @@ public class VEnta extends AppCompatActivity {
         btnComprar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent a=new Intent(getApplicationContext(),MenuPrincipal.class);
-                //TODO: mostrar mensaje de felicidades por la compra :v
-                startActivity(a);
+                AlertDialog.Builder Dialogo = new AlertDialog.Builder(VEnta.this);
+
+                Dialogo.setTitle("¿Comprar Producto?");
+                Dialogo.setMessage("¿Estás serguro que deseas comprar este producto?\n"+
+                "");
+
+
+                Dialogo.setPositiveButton("Si",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(getApplicationContext(),
+                                        "Gracias Por Su Compra", Toast.LENGTH_LONG).show();
+                                Intent a = new Intent(getApplicationContext(), MenuPrincipal.class);
+                                finish();
+                                startActivity(a);
+                            }
+                        });
+
+                Dialogo.setNegativeButton("No",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        });
+                Dialogo.show();
+
+
+
+                SharedPreferences prefs =
+                        getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
+
+                SharedPreferences.Editor editor = prefs.edit();
+                editor.clear();
+                editor.commit();
             }
         });
     }

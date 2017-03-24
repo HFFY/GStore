@@ -17,6 +17,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -51,20 +54,15 @@ public class MenuPrincipal extends AppCompatActivity {
     private ImageView imgArcade;
     private ImageView imgTerror;
     private ImageView imgDeportes;
-    private ImageView imgGeekzone;
-
     private TextView titulo;
-    private TextView cerrar;
-
     private static final int DRAWER_ITEM_UNO = 1;
     private static final int DRAWER_ITEM_DOS = 2;
     private static final int DRAWER_ITEM_TRES = 3;
     private static final int DRAWER_ITEM_CUATRO = 4;
-
-    //Definimos el entorno
     private Drawer drawer;
     private Context context;
     private FrameLayout contenedor;
+    private SliderLayout sliderLayout;
 
     Toolbar toolbar;
 
@@ -75,11 +73,11 @@ public class MenuPrincipal extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_principal);
         context=this;
+        sliderLayout=(SliderLayout)findViewById(R.id.sliderMenu);
         imgLaptop=(ImageView)findViewById(R.id.imgLaptop);
         imgCelular=(ImageView)findViewById(R.id.imgCelular);
         imgWatch=(ImageView)findViewById(R.id.imgWatch);
         imgApple=(ImageView)findViewById(R.id.imgApple);
-        //imgSamsung=(ImageView)findViewById(R.id.imgSamsung);
         imgHuawei=(ImageView)findViewById(R.id.imgHuawei);
         imgOferta=(ImageView)findViewById(R.id.imgOfertas);
         imgComic=(ImageView)findViewById(R.id.imgComic);
@@ -97,8 +95,25 @@ public class MenuPrincipal extends AppCompatActivity {
         imgArcade=(ImageView)findViewById(R.id.imgArcade);
         imgTerror=(ImageView)findViewById(R.id.imgTerror);
         imgDeportes=(ImageView)findViewById(R.id.imgDeportes);
-
         titulo=(TextView)findViewById(R.id.Titulo);
+
+        DefaultSliderView slider=new DefaultSliderView(context);
+        slider.image("https://ispharus.com.mx/wp-content/uploads/2015/06/trizonch_kitty_propaganda_by_artisticpoulp-d4uj22n.gif");
+        sliderLayout.addSlider(slider);
+
+        DefaultSliderView slider2=new DefaultSliderView(context);
+        slider2.image("http://www.next-stage.fr/wp-content/uploads/2016/02/Star_Wars_Enlist_Today_Cliff_Chiang_Darth_Vader.jpg");
+        sliderLayout.addSlider(slider2);
+
+        DefaultSliderView slider3=new DefaultSliderView(context);
+        slider3.image("http://1.bp.blogspot.com/-ftzFXXGvOE0/URCQFmcP65I/AAAAAAAAAlo/5XasHz31Ivo/s1600/22348_PADUCA_23x11.jpg");
+        sliderLayout.addSlider(slider3);
+
+        DefaultSliderView slider4=new DefaultSliderView(context);
+        slider4.image("http://www.superdrug.com/medias/custom-content/microsites/2015/event09/old-spice/old-spice-gs2.jpg");
+        sliderLayout.addSlider(slider4);
+
+        sliderLayout.startAutoCycle();
 
         SharedPreferences prefs =
                 getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
@@ -139,7 +154,7 @@ public class MenuPrincipal extends AppCompatActivity {
                         //Items de navegacion
                         new PrimaryDrawerItem().
                                 withIdentifier(DRAWER_ITEM_UNO).
-                                withName("DAtos de Usuario").
+                                withName("Datos de Usuario").
                                 withTextColor(getResources().getColor(R.color.primary)).
                                 withIconColor(getResources().getColor(R.color.primary)).
                                 withSelectedTextColor(getResources().getColor(R.color.colorAccent)).
@@ -147,7 +162,7 @@ public class MenuPrincipal extends AppCompatActivity {
                                 withIcon(FontAwesome.Icon.faw_home),
                         new PrimaryDrawerItem().
                                 withIdentifier(DRAWER_ITEM_DOS).
-                                withName("En duda").
+                                withName("").
                                 withTextColor(getResources().getColor(R.color.primary)).
                                 withIconColor(getResources().getColor(R.color.primary)).
                                 withSelectedTextColor(getResources().getColor(R.color.colorAccent)).
@@ -402,6 +417,9 @@ public class MenuPrincipal extends AppCompatActivity {
         switch (identificador){
             case DRAWER_ITEM_UNO:
 
+                Intent arcade= new Intent(context,Arcade.class);
+                startActivity(arcade);
+
                 break;
             case DRAWER_ITEM_DOS:
 
@@ -410,9 +428,11 @@ public class MenuPrincipal extends AppCompatActivity {
                 AlertDialog dialogo;
                 AlertDialog.Builder builder = new AlertDialog.Builder(MenuPrincipal.this);
 
-                builder.setTitle("G-Store V2.0 Creada Por:");
+                builder.setTitle("G-Store V1.0 Creada Por:");
                 builder.setMessage("Hugo Flores\n" +
+                                "Contacto: 75209501 hugorilahffy@gmail.com\n"+
                 "Sergio Bellot\n"+
+                        "Contacto: 71240013 sbellott@hotmail.com\n"+
                 "Matheus Garcia Mesa");
                 dialogo = builder.create();
                 dialogo.getWindow().getAttributes().windowAnimations = R.style.transicion;
@@ -430,13 +450,11 @@ public class MenuPrincipal extends AppCompatActivity {
             default:
                 break;
         }
-
-       // Toast.makeText(context,"Selecciono el item N "+identificador,Toast.LENGTH_LONG).show();
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        //Guardamos la info del drawer
+        //Info del drawer
         if (drawer != null) {
             outState = drawer.saveInstanceState(outState);
         }
@@ -445,14 +463,11 @@ public class MenuPrincipal extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu.menu_menu_principal, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        //Boton hamburguesa en el ActionBar para Abrir y Cerrar el Navigation Drawer
         if(item.getItemId()==android.R.id.home) {
             if (drawer.isDrawerOpen())
                 drawer.closeDrawer();

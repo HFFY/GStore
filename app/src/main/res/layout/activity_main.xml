@@ -30,8 +30,8 @@
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/gstore" />
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:text="Usuario"

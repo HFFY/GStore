@@ -33,22 +33,10 @@ public class Carrera extends AppCompatActivity {
 
         DefaultSliderView slider=new DefaultSliderView(context);
         slider.image(R.drawable.revoltgrande);
-        slider.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                Toast.makeText(context, "Hice click en el slider", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider);
+
         DefaultSliderView slider1=new DefaultSliderView(context);
         slider1.image(R.drawable.crashgrande);
-
-        slider1.setOnSliderClickListener(new BaseSliderView.OnSliderClickListener() {
-            @Override
-            public void onSliderClick(BaseSliderView baseSliderView) {
-                Toast.makeText(context, "Hice click en el slider1", Toast.LENGTH_SHORT).show();
-            }
-        });
         sliderLayout.addSlider(slider1);
 
         sliderLayout.startAutoCycle();
