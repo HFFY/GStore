@@ -11,7 +11,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 
 import java.util.ArrayList;
@@ -37,6 +36,22 @@ public class Rpg extends AppCompatActivity {
         DefaultSliderView slider1=new DefaultSliderView(context);
         slider1.image(R.drawable.wargrande);
         sliderLayout.addSlider(slider1);
+
+        DefaultSliderView slider2=new DefaultSliderView(context);
+        slider2.image(R.drawable.wars2grande);
+        sliderLayout.addSlider(slider2);
+
+        DefaultSliderView slider3=new DefaultSliderView(context);
+        slider3.image(R.drawable.zeldagrande);
+        sliderLayout.addSlider(slider3);
+
+        DefaultSliderView slider4=new DefaultSliderView(context);
+        slider4.image(R.drawable.lineagegrande);
+        sliderLayout.addSlider(slider4);
+
+        DefaultSliderView slider5=new DefaultSliderView(context);
+        slider5.image(R.drawable.skyrimgrande);
+        sliderLayout.addSlider(slider5);
 
         sliderLayout.startAutoCycle();
 

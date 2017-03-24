@@ -77,7 +77,7 @@ public class VEnta extends AppCompatActivity {
         grupo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 RadioButton seleccionado = (RadioButton) findViewById(checkedId);
-                //TODO: q cambie la imagen de batman de acuerdo al metodo de pago
+
             }
         });
 

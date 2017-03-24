@@ -2,17 +2,15 @@ package com.example.hffy.gstore;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 
 import java.util.ArrayList;
@@ -38,6 +36,22 @@ public class Carrera extends AppCompatActivity {
         DefaultSliderView slider1=new DefaultSliderView(context);
         slider1.image(R.drawable.crashgrande);
         sliderLayout.addSlider(slider1);
+
+        DefaultSliderView slider2=new DefaultSliderView(context);
+        slider2.image(R.drawable.asphaltgrande1);
+        sliderLayout.addSlider(slider2);
+
+        DefaultSliderView slider3=new DefaultSliderView(context);
+        slider3.image(R.drawable.needspeedgrande);
+        sliderLayout.addSlider(slider3);
+
+        DefaultSliderView slider4=new DefaultSliderView(context);
+        slider4.image(R.drawable.racinggrande);
+        sliderLayout.addSlider(slider4);
+
+        DefaultSliderView slider5=new DefaultSliderView(context);
+        slider5.image(R.drawable.scargrande);
+        sliderLayout.addSlider(slider5);
 
         sliderLayout.startAutoCycle();
 

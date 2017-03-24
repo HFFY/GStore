@@ -156,11 +156,11 @@
                 <ImageView
                     android:id="@+id/imgPago"
                     android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_height="100dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/bat" />
+                    app:srcCompat="@drawable/pago" />
             </LinearLayout>
 
             <Button
