@@ -58,7 +58,7 @@ public class Alien extends AppCompatActivity {
 
         sliderLayout.startAutoCycle();
 
-        items.add(new Item(1,1250,"Laptop", "Diseñado para la mejor experiencia de realidad virtual", R.drawable.alienlap, "9WLI9Hf5r0A", R.drawable.alienlap1, " Diseñado para la mejor experiencia de realidad virtual con tecnología tobi\n" +
+        items.add(new Item(1,1250,"Laptop", "Diseñado para la mejor experiencia en realidad virtual", R.drawable.alienlap, "9WLI9Hf5r0A", R.drawable.alienlap1, " Diseñado para la mejor experiencia de realidad virtual con tecnología tobi\n" +
                 " Intel® Core™ i7-7820HK\n"));
         items.add(new Item(2,1100,"Aurora", "Diseñada para realidad virtual y con sistema de enfriamiento liquido", R.drawable.aurora, "Oc6tSuwPQW0", R.drawable.aurora1, " Diseñada para realidad virtual y con sistema de enfriamiento liquido\n" +
                 "\n" +
