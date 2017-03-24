@@ -1,15 +1,16 @@
 package com.example.hffy.gstore;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -22,6 +23,8 @@ public class Apple extends AppCompatActivity {
     private ArrayList<Item> items=new ArrayList<Item>();
     private SliderLayout sliderLayout;
     private Context context;
+    private static final int VERSION = 1;
+
 
 
     @Override
@@ -126,6 +129,78 @@ public class Apple extends AppCompatActivity {
 
                 while();
          */
+
+        DatosProductos pro = new DatosProductos(context,"DatosProductos",null, VERSION);
+        SQLiteDatabase db = pro.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+
+       values.put("Name","Iphone");
+       values.put("Precio","400");
+       values.put("Imagen1",R.drawable.appleiphone);
+       values.put("Imagen2",R.drawable.iphonegrande);
+       values.put("Desc1","lo ultimo en smart phones de la linea iphone con sistema operativo IO's en su ultima version");
+       values.put("Desc2","Descripcion con unboxing del dispositivo Iphone en general en el video (click en la imgen)");
+       values.put("Url","DTh-I70X_YU");
+       db.insert("DatosProductos",null,values);
+
+       db.close();
+      //
+      //
+      // values.put("Name","Imac");
+      // values.put("Precio","1150");
+      // values.put("Imagen 1",R.drawable.appleimac);
+      // values.put("Imagen 2",R.drawable.imac1grande);
+      // values.put("Desc1","Computadora de escritorio de la linea Apple bastante comoda y actual para el uso en casa o oficinas");
+      // values.put("Desc2","Descripcion con unboxing del dispositivo Imac en general en el video (click en la imgen)");
+      // values.put("Url","yZp1heY3vCY");
+      // db.insert("DatosProductos",null,values);
+      // db.close();
+      //
+      // values.put("Name","MacBookpro");
+      // values.put("Precio","1300");
+      // values.put("Imagen 1",R.drawable.applemacbookpro);
+      // values.put("Imagen 2",R.drawable.macbookprogrande);
+      // values.put("Desc1","Computadora portátil Apple dirigida especificamente a aquellos que desean un mejor rendimiento y capacidad de procesamiento");
+      // values.put("Desc2","Descripcion con unboxing de la MaxbookPro en el video (click en la imgen)");
+      // values.put("Url","2GftT2og8Uc");
+      // db.insert("DatosProductos",null,values);
+      // db.close();
+      //
+      // values.put("Name","MacBook");
+      // values.put("Precio","1200");
+      // values.put("Imagen 1",R.drawable.applemabook);
+      // values.put("Imagen 2",R.drawable.macbookgrande);
+      // values.put("Desc1","Computadora portátil de uso mas casual aunque sin dejar de ser bastante util y moderna");
+      // values.put("Desc2","Descripcion con unboxing de la MacBook en general en el video (click en la imgen)");
+      // values.put("Url","3OIftOhgTyw");
+      // db.insert("DatosProductos",null,values);
+      // db.close();
+      //
+      // values.put("Name","IpadmINI");
+      // values.put("Precio","500");
+      // values.put("Imagen 1",R.drawable.appleipad);
+      // values.put("Imagen 2",R.drawable.ipadminigrande);
+      // values.put("Desc1","Computadora de estilo tableta de tamaño mediano con sistema operativo IO's de uso mas familiar o de trabajo");
+      // values.put("Desc2","Descripcion con unboxing del IpadMini en el video (click en la imgen)");
+      // values.put("Url","VyvfDDSOrao");
+      // db.insert("DatosProductos",null,values);
+      // db.close();
+      //
+      // values.put("Name","Iphone 7 plus");
+      // values.put("Precio","900");
+      // values.put("Imagen 1",R.drawable.appleiphone);
+      // values.put("Imagen 2",R.drawable.iphone7grande);
+      // values.put("Desc1","Celular de Apple de última generación bastante comodo y tambien  de multiples herramientas");
+      // values.put("Desc2","Descripcion con unboxing del iphone 7 en el video (click en la imgen)");
+      // values.put("Url","4-4Jz6Lr014");
+      // db.insert("DatosProductos",null,values);
+      //
+      // db.close();
+
+
+
+
 
 
         items.add(new Item(1,400,"Iphone", "lo ultimo en smart phones de la linea iphone con sistema operativo IO's en su ultima version", R.drawable.appleiphone,"DTh-I70X_YU", R.drawable.iphonegrande,"Descripcion con unboxing del dispositivo Iphone en general en el video (click en la imgen) "));
