@@ -2,17 +2,15 @@ package com.example.hffy.gstore;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 
 import java.util.ArrayList;
@@ -57,7 +55,7 @@ public class Manga extends AppCompatActivity {
 
         sliderLayout.startAutoCycle();
 
-        items.add(new Item(1, 20, "Dragon ball", "saga completa de los guerreros z desde que goku era pequeño", R.drawable.dragonball1," ", R.drawable.dragonball2,"saga completa de los guerreros z desde que goku era pequeño"));
+        items.add(new Item(1, 20, "Dragon ball", "saga completa de los guerreros z desde que goku era pequeño", R.drawable.dragonball1,"-KxltyWTWHg", R.drawable.dragonball2,"saga completa de los guerreros z desde que goku era pequeño"));
         items.add(new Item(2, 20,"Naruto Shipuden", "Naruto ya no es un niño ", R.drawable.naruto1,"ehAny9zDrRQ", R.drawable.naruto2,"Naruto ya no es un niño y ahora debe salvar a sus amigos y su aldea de sasuke e itachi quienes se volvieron malos"));
         items.add(new Item(3, 20,"Digimon", "Historias particulares que pasan en el digimundo", R.drawable.digimon1,"cpsrFBbWE4w", R.drawable.digimon2,"Historias particulares que pasan en el digimundo donde solamente los digimons son los protagonistas "));
         items.add(new Item(4, 20,"Onepunch", "Saitama", R.drawable.onepunch1,"nOdl5eR9MeQ", R.drawable.onepunch2,"La historia se centra en Saitama, un superhéroe calvo y extremadamente fuerte que se muestra abrumado por la ausencia de un verdadero desafío, y que continuamente busca a un oponente digno de su poder."));
