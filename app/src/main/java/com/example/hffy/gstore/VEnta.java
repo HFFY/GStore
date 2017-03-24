@@ -98,7 +98,6 @@ public class VEnta extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(),
                                         "Gracias Por Su Compra", Toast.LENGTH_LONG).show();
                                 Intent a = new Intent(getApplicationContext(), MenuPrincipal.class);
-                                finish();
                                 startActivity(a);
                             }
                         });
@@ -110,15 +109,6 @@ public class VEnta extends AppCompatActivity {
                             }
                         });
                 Dialogo.show();
-
-
-
-                SharedPreferences prefs =
-                        getSharedPreferences("MisPreferencias", Context.MODE_PRIVATE);
-
-                SharedPreferences.Editor editor = prefs.edit();
-                editor.clear();
-                editor.commit();
             }
         });
     }
