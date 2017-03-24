@@ -28,7 +28,7 @@ public class Arcade extends AppCompatActivity {
         ListView lista=(ListView)findViewById(R.id.ListViewArcade);
 
         context=this;
-        sliderLayout=(SliderLayout)findViewById(R.id.sliderDeportes);
+        sliderLayout=(SliderLayout)findViewById(R.id.sliderArcade);
 
         DefaultSliderView slider=new DefaultSliderView(context);
         slider.image(R.drawable.duckgrande);
