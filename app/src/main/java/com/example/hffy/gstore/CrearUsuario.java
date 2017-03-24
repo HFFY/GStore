@@ -76,7 +76,7 @@ public class CrearUsuario extends AppCompatActivity {
                             String userString = gson.toJson(usuario);
                             intent.putExtra("registros", userString);
                             intent.putExtra("ver", true);
-
+                            Toast.makeText(context, "Usuario Creado", Toast.LENGTH_LONG).show();
                             startActivity(intent);
                             finish();
 

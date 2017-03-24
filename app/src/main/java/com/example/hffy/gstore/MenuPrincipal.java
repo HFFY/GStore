@@ -121,7 +121,7 @@ public class MenuPrincipal extends AppCompatActivity {
         //Se busca los datos almacenados. SI no hay el resultado será no.
         String usuario_almacenado = prefs.getString("txtUsuario","no");
 
-        titulo.setText("Bienvenido: "+usuario_almacenado);
+        titulo.setText("¡¡¡Bienvenido!!!");
 
         //DESDE
 
@@ -140,8 +140,9 @@ public class MenuPrincipal extends AppCompatActivity {
                 .withHeaderBackground(R.drawable.androidrec)
                 .addProfiles(
                         new ProfileDrawerItem().
-                                withName("Dev Fest 2015").
-                                withEmail("info@devfest.xyz")
+                                withName(usuario_almacenado).
+                                withEmail(" Bienvenido A G-Store")
+
                 )
                 .build();
 
@@ -152,22 +153,6 @@ public class MenuPrincipal extends AppCompatActivity {
                 .addDrawerItems(
                         new DividerDrawerItem(),
                         //Items de navegacion
-                        new PrimaryDrawerItem().
-                                withIdentifier(DRAWER_ITEM_UNO).
-                                withName("Datos de Usuario").
-                                withTextColor(getResources().getColor(R.color.primary)).
-                                withIconColor(getResources().getColor(R.color.primary)).
-                                withSelectedTextColor(getResources().getColor(R.color.colorAccent)).
-                                withSelectedIconColor(getResources().getColor(R.color.colorAccent)).
-                                withIcon(FontAwesome.Icon.faw_home),
-                        new PrimaryDrawerItem().
-                                withIdentifier(DRAWER_ITEM_DOS).
-                                withName("").
-                                withTextColor(getResources().getColor(R.color.primary)).
-                                withIconColor(getResources().getColor(R.color.primary)).
-                                withSelectedTextColor(getResources().getColor(R.color.colorAccent)).
-                                withSelectedIconColor(getResources().getColor(R.color.colorAccent)).
-                                withIcon(FontAwesome.Icon.faw_mars_stroke_v),
                         new PrimaryDrawerItem().
                                 withIdentifier(DRAWER_ITEM_TRES).
                                 withName("About").
@@ -415,15 +400,6 @@ public class MenuPrincipal extends AppCompatActivity {
     private void seleccionartItem(int identificador)
     {
         switch (identificador){
-            case DRAWER_ITEM_UNO:
-
-                Intent arcade= new Intent(context,Arcade.class);
-                startActivity(arcade);
-
-                break;
-            case DRAWER_ITEM_DOS:
-
-                break;
             case DRAWER_ITEM_TRES:
                 AlertDialog dialogo;
                 AlertDialog.Builder builder = new AlertDialog.Builder(MenuPrincipal.this);

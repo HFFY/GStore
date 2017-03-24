@@ -1,5 +1,6 @@
 package com.example.hffy.gstore;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,17 +10,52 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.daimajia.slider.library.SliderLayout;
+import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
+
 import java.util.ArrayList;
 
 public class Arcade extends AppCompatActivity {
 
     private ArrayList<Item> items=new ArrayList<Item>();
+    private SliderLayout sliderLayout;
+    private Context context;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_arcade);
         ListView lista=(ListView)findViewById(R.id.ListViewArcade);
+
+        context=this;
+        sliderLayout=(SliderLayout)findViewById(R.id.sliderCelular);
+
+        DefaultSliderView slider=new DefaultSliderView(context);
+        slider.image(R.drawable.duckgrande);
+        sliderLayout.addSlider(slider);
+
+        DefaultSliderView slider1=new DefaultSliderView(context);
+        slider1.image(R.drawable.mariogrande);
+        sliderLayout.addSlider(slider1);
+
+        DefaultSliderView slider2=new DefaultSliderView(context);
+        slider2.image(R.drawable.pacmangrande);
+        sliderLayout.addSlider(slider2);
+
+        DefaultSliderView slider3=new DefaultSliderView(context);
+        slider3.image(R.drawable.ponggrande);
+        sliderLayout.addSlider(slider3);
+
+        DefaultSliderView slider4=new DefaultSliderView(context);
+        slider4.image(R.drawable.princegrande);
+        sliderLayout.addSlider(slider4);
+
+        DefaultSliderView slider5=new DefaultSliderView(context);
+        slider5.image(R.drawable.tetrisgrande);
+        sliderLayout.addSlider(slider5);
+
+        sliderLayout.startAutoCycle();
 
         items.add(new Item(1, 25,"Duck Hunt", "Duck Hunt (lit. cacería de patos) es un videojuego creado y desarrollado por Nintendo para la Nintendo Entertainment System (NES). También fue publicado en los arcades en el año 1984 bajo el nombre Vs. Duck Hunt.", R.drawable.duckpeque,"-1zrj4n7qio", R.drawable.duckgrande,"Duck Hunt (lit. cacería de patos) es un videojuego creado y desarrollado por Nintendo para la Nintendo Entertainment System (NES). También fue publicado en los arcades en el año 1984 bajo el nombre Vs. Duck Hunt. El título fue uno de los dos juegos incluidos con el primer lanzamiento de la consola. El jugador debe utilizar una pistola de luz, normalmente la Nintendo Zapper, para disparar a los patos que vuelan por la pantalla, obteniendo puntos y avanzando niveles conforme acierta a los objetivos. Existe un modo adicional en el que los objetivos a impactar se cambian por discos. El juego inicialmente no fue frecuentemente revisado por la crítica, pero obtuvo calificaciones positivas de parte de los jugadores. Antes de lanzar la versión de NES, Nintendo había creado otro juego de cacería de patos basado en el sistema Laser Clay Shooting System, que fue lanzado en 1976."));
         items.add(new Item(2, 25,"Mario Bros", "Mario Bros. es un videojuego de arcade desarrollado por Nintendo en el año 1983. Fue creado por Shigeru Miyamoto. Ha sido presentado como un minijuego en la serie de Super Mario Advance y otros juegos. Mario Bros.", R.drawable.mariopeque,"CujSHJ3QkdQ", R.drawable.mariogrande,"Mario Bros. es un videojuego de arcade desarrollado por Nintendo en el año 1983. Fue creado por Shigeru Miyamoto. Ha sido presentado como un minijuego en la serie de Super Mario Advance y otros juegos. Mario Bros. ha sido relanzado para Wii, Nintendo 3DS y Wii U en los servicios de Consola Virtual en Japón, Norteamérica, Europa y Australia. Fue la tercera aparición de Mario, y la primera que aparece con su nombre definitivo, ya que en Donkey Kong (1981) aparecía bajo el seudónimo de Jumpman (‘saltador’). En el juego, Mario es retratado como un fontanero italo-estadounidense que, junto con su hermano menor Luigi, tiene que derrotar a las criaturas que han venido de las alcantarillas debajo de Nueva York. El juego se centra en la exterminación de ellos, volteándolos sobre sus espaldas y pateándolos. Las versiones originales de Mario Bros. -la versión de arcade y la versión de Family Computer/Nintendo Entertainment System (FC/NES)- fueron recibidas positivamente por los críticos."));

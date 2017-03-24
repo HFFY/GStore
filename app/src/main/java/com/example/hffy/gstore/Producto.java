@@ -65,25 +65,13 @@ public class Producto extends AppCompatActivity {
         imgGrande.setImageResource(imgg);
         lblTitulo.setText(titulo);
         lblDescripcion.setText(descripcion);
-        estrellas=(int)(Math.random()*5)+1;
+        imgEstrella1.setImageResource(R.drawable.estrella);
+        imgEstrella2.setImageResource(R.drawable.estrella);
+        imgEstrella3.setImageResource(R.drawable.estrella);
+        estrellas=(int)(Math.random()*3)+1;
         if(estrellas==1){
-            imgEstrella1.setImageResource(R.drawable.estrella);
-        } else if(estrellas==2){
-            imgEstrella1.setImageResource(R.drawable.estrella);
-            imgEstrella2.setImageResource(R.drawable.estrella);
-        }else if(estrellas==3){
-            imgEstrella1.setImageResource(R.drawable.estrella);
-            imgEstrella2.setImageResource(R.drawable.estrella);
-            imgEstrella3.setImageResource(R.drawable.estrella);
-        }else if(estrellas==4){
-            imgEstrella1.setImageResource(R.drawable.estrella);
-            imgEstrella2.setImageResource(R.drawable.estrella);
-            imgEstrella3.setImageResource(R.drawable.estrella);
             imgEstrella4.setImageResource(R.drawable.estrella);
-        }else {
-            imgEstrella1.setImageResource(R.drawable.estrella);
-            imgEstrella2.setImageResource(R.drawable.estrella);
-            imgEstrella3.setImageResource(R.drawable.estrella);
+        } else if(estrellas==2){
             imgEstrella4.setImageResource(R.drawable.estrella);
             imgEstrella5.setImageResource(R.drawable.estrella);
         }
