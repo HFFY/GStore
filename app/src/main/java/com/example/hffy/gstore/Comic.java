@@ -53,12 +53,11 @@ public class Comic extends AppCompatActivity {
 
         sliderLayout.startAutoCycle();
 
-        items.add(new Item(1,20,"Deadpool", "Deadpool entra en una reflexión sobre su vida de mercenario...", R.drawable.deadpoolpeque,"z-jAiWgZbcg", R.drawable.deadgrande,"Deadpool entra en una reflexión sobre su vida de mercenario y empieza a pensar de forma distinta y como usará sus poderes"));
+        items.add(new Item(1,20,"Deadpool", "Deadpool entra en una reflexión sobre su vida de mercenario...", R.drawable.deadpoolpeque,"I4tFNfROlqk", R.drawable.deadpoolgrande,"Deadpool entra en una reflexión sobre su vida de mercenario y empieza a pensar de forma distinta y como usará sus poderes"));
         items.add(new Item(2,20,"StarWars", "La Saga de Star Wars en la vida real", R.drawable.starwars,"YWNvdoRnNv8", R.drawable.starwars1,"La Saga de Star Wars en la vida real, ampliamente ilustrada y completamente actualizada."));
         items.add(new Item(3,11,"Doompatrol", " Robot futurista", R.drawable.doompatrol,"dP3jwjnvf4A", R.drawable.doompatrol1," Robot futurista creado para mantener el orden de la humanidad"));
         items.add(new Item(4,11,"Flash", "El hombre mas rápido en el planeta", R.drawable.flash,"-FHexSN5n-I", R.drawable.flash1,"El hombre mas rápido en el planeta enfocado en ayudar y salvar vidas utilizando su velocidad de muchas formas."));
         items.add(new Item(5,11,"Batman", " Historias peculiares de batman  ", R.drawable.batman,"PfEXKi83glA", R.drawable.batman1,"Historias peculiares de batman contra enemigos no muy conocidos pero que son un problema para gotham "));
-        //items.add(new Item(6, "Guardianes de la galaxia", "los guardianes de la galaxia se reúnen para derrotar a un enemigo que secuestro a groot llamado el leviathan ", R.drawable.guar," ", R.drawable.appleiphone,"los guardianes de la galaxia se reúnen para derrotar a un enemigo que secuestro a groot llamado el leviathan "));
 
         AdaptadorItem adaptador=new AdaptadorItem(Comic.this, items);
         lista.setAdapter(adaptador);
